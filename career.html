@@ -272,6 +272,53 @@
             max-width: 600px;
             margin: 0 auto;
         }
+        
+        /* Date Duration Cards */
+        .date-duration-card {
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.15) 0%, rgba(52, 152, 219, 0.25) 100%);
+            border: 1px solid rgba(52, 152, 219, 0.3);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .date-duration-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.2);
+            border-color: rgba(52, 152, 219, 0.4);
+        }
+        
+        .date-range {
+            font-size: 0.9rem;
+            color: #ffffff;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+        
+        .duration-badge {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: #ffffff;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .date-duration-card {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
     </style>
 </head>
 
@@ -461,74 +508,178 @@
             <div class="col-12 col-lg-10 mx-auto">
                 <h2 class="timeline-header" style="color: #ffffff; text-align: center; margin-bottom: 3rem;">PREVIOUS APPOINTMENTS</h2>
                 
+                <!-- Career Summary Card -->
+                <div class="milestone-card" style="margin-bottom: 3rem; background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(52, 152, 219, 0.05) 100%); border: 2px solid rgba(52, 152, 219, 0.3);">
+                    <div class="row align-items-center">
+                        <div class="col-md-8">
+                            <h3 class="milestone-title" style="color: #3498db; margin-bottom: 0.5rem;">Complete Medical Career Timeline</h3>
+                            <p style="color: #b0c4de; margin-bottom: 0;">From House Officer to Emeritus Professor • Al-Azhar University System</p>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="date-duration-card" style="background: linear-gradient(135deg, rgba(52, 152, 219, 0.25) 0%, rgba(52, 152, 219, 0.35) 100%); border: 2px solid rgba(52, 152, 219, 0.4);">
+                                <div class="date-range" style="font-size: 1rem; font-weight: 600;">01 Mar 1980 - Present</div>
+                                <div class="duration-badge" style="background: linear-gradient(135deg, #e74c3c, #c0392b); font-size: 0.9rem; padding: 0.4rem 1rem;">44+ Years of Excellence</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
                 <!-- House Officer -->
                 <div class="milestone-card" style="margin-bottom: 2rem;">
-                    <h3 class="milestone-title">House Officer (01/03/1980 - 28/02/1981)</h3>
-                    <p><strong>Institution:</strong> Al Azhar University Hospitals, Cairo, Egypt</p>
+                    <div class="row align-items-center" style="margin-bottom: 1.5rem;">
+                        <div class="col-md-8">
+                            <h3 class="milestone-title">House Officer</h3>
+                            <p><strong>Institution:</strong> Al Azhar University Hospitals, Cairo, Egypt</p>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="date-duration-card">
+                                <div class="date-range">01 Mar 1980 - 28 Feb 1981</div>
+                                <div class="duration-badge">12 Months</div>
+                            </div>
+                        </div>
+                    </div>
                     <p>Al-Azhar University hospital is teaching hospital of 1200 beds total. This post was a rotating house officer. I spent two months in each of the following departments: General surgery - General Medicine - Pediatric medicine - Gynecology & Obstetrics, skin & venereal and orthopedic surgery. It was residential. I was on call every other night. I assisted at care of the patients on outpatient clinic and in the department. I gained experience in acute medical and surgical emergencies.</p>
                 </div>
 
-                <!-- Registrar -->
+                                <!-- Registrar -->
                 <div class="milestone-card" style="margin-bottom: 2rem;">
-                    <h3 class="milestone-title">Registrar of General & Vascular Surgery (23/05/1981 - 22/05/1984)</h3>
-                    <p><strong>Institution:</strong> Vascular Surgery Unit, Department of General Surgery, AI Zahraa University hospital, AI Azhar faculty of Medicine for girls Cairo, Egypt</p>
+                    <div class="row align-items-center" style="margin-bottom: 1.5rem;">
+                        <div class="col-md-8">
+                            <h3 class="milestone-title">Registrar of General & Vascular Surgery</h3>
+                            <p><strong>Institution:</strong> Vascular Surgery Unit, Department of General Surgery, AI Zahraa University hospital</p>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="date-duration-card">
+                                <div class="date-range">23 May 1981 - 22 May 1984</div>
+                                <div class="duration-badge">3 Years</div>
+                            </div>
+                        </div>
+                    </div>
                     <p>AI Zhraa is a teaching hospital at which 400 medical students attend annually. It contains 1200 beds. There are 200 surgical beds; this post was residential for three years. I was on call one night in two. I gained experience in acute surgical emergencies. I assisted Professor EL NAGGAR's outpatient clinic twice weekly at which 7000 surgical problems were seen annually. My master ship thesis was focused on "The role of lumber sympathectomy in chronic occlusive diseases in the lower extremities". By the end of this period I got my master ship in general surgery in high marks (very good). My special interest has been in the field of vascular surgery.</p>
-            </div>
+                </div>
 
-                <!-- Assistant Lecturer -->
+                                <!-- Assistant Lecturer -->
                 <div class="milestone-card" style="margin-bottom: 2rem;">
-                    <h3 class="milestone-title">Assistant Lecturer of General & Vascular Surgery (10/1/1985 - 5/9/1989)</h3>
-                    <p><strong>Institution:</strong> Vascular Surgery Unit, Department of General Surgery, AI Zahraa University hospital</p>
+                    <div class="row align-items-center" style="margin-bottom: 1.5rem;">
+                        <div class="col-md-8">
+                            <h3 class="milestone-title">Assistant Lecturer of General & Vascular Surgery</h3>
+                            <p><strong>Institution:</strong> Vascular Surgery Unit, Department of General Surgery, AI Zahraa University hospital</p>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="date-duration-card">
+                                <div class="date-range">10 Jan 1985 - 05 Sep 1989</div>
+                                <div class="duration-badge">4 Years 8 Months</div>
+                            </div>
+                        </div>
+                    </div>
                     <p>The post was non-residential. I was on call one night in three. I participated in teaching. I gave one tutorial and one clinical teaching session to the students each week. I assisted at the outpatient clinic twice weekly, at the theater twice weekly. During this period, I completed my M.D. thesis on the topic "Surgery of the deep venous system in the management of postphlebitic limb syndrome". I was trained in variety of general and vascular operation either acute or cold, Abdominal ultrasonic examination. Doppler examination of arterial & venous problems, and was competent to perform these procedures without supervision at the end of my appointment.</p>
-        </div>
+                </div>
         
-                <!-- Lecturer -->
+                                <!-- Lecturer -->
                 <div class="milestone-card" style="margin-bottom: 2rem;">
-                    <h3 class="milestone-title">Lecturer of General and Vascular Surgery (6/9/1989 - 3/1/1995)</h3>
-                    <p><strong>Institution:</strong> Vascular Surgery Unit, Department of General Surgery, AI Zahraa University hospital</p>
+                    <div class="row align-items-center" style="margin-bottom: 1.5rem;">
+                        <div class="col-md-8">
+                            <h3 class="milestone-title">Lecturer of General and Vascular Surgery</h3>
+                            <p><strong>Institution:</strong> Vascular Surgery Unit, Department of General Surgery, AI Zahraa University hospital</p>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="date-duration-card">
+                                <div class="date-range">06 Sep 1989 - 03 Jan 1995</div>
+                                <div class="duration-badge">5 Years 4 Months</div>
+                            </div>
+                        </div>
+                    </div>
                     <p>This post was non residential. I was on call one night in three. I gave two senior and one junior tutorial and two clinical teaching sessions to the students each week, and participated in the professorial department's clinical teaching sessions which are held twice weekly.</p>
                 </div>
 
                 <!-- Research Fellowship -->
                 <div class="milestone-card" style="margin-bottom: 2rem;">
-                    <h3 class="milestone-title">Research Fellow in Vascular Surgery (September 1994 - February 28, 1995)</h3>
-                    <p><strong>Institution:</strong> Johns Hopkins University, Department of surgery, Division of Vascular surgery, Baltimore, Maryland, U.S.A</p>
+                    <div class="row align-items-center" style="margin-bottom: 1.5rem;">
+                        <div class="col-md-8">
+                            <h3 class="milestone-title">Research Fellow in Vascular Surgery</h3>
+                            <p><strong>Institution:</strong> Johns Hopkins University, Department of surgery, Division of Vascular surgery, Baltimore, Maryland, U.S.A</p>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="date-duration-card">
+                                <div class="date-range">Sep 1994 - 28 Feb 1995</div>
+                                <div class="duration-badge">6 Months</div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="career-highlight">
                         <h4>Fellowship Focus</h4>
                         <p><strong>Operative techniques:</strong> Infra-and supra-renal abdominal aneurysms & Thoraco-abdominal aneurysms managed by partial left heart bypass & carotid endarterectomies & peripheral bypass procedures.</p>
                         <p><strong>Radiology department:</strong> PTA and stent deployment for treating arterial stenosis of extremities & trans Jugular Intrahepatic Porto-caval Shunt T.I.P.S.</p>
                         <p><strong>Vascular laboratory:</strong> Duplex ultrasonography and its value in evaluations both carotid and venous diseases.</p>
                         <p>During this period I also attended weekly vascular conferences which discussed interesting and important cases and the clinic of professor G. Melville Williams twice weekly.</p>
-                            </div>
-                        </div>
+                    </div>
+                </div>
 
                 <!-- Assistant Professor -->
                 <div class="milestone-card" style="margin-bottom: 2rem;">
-                    <h3 class="milestone-title">Assistant Professor of Vascular Surgery (4/1/1995 - 2/5/2000)</h3>
-                    <p><strong>Institution:</strong> Vascular unit, Department of general surgery, AI Zahraa University hospital</p>
+                    <div class="row align-items-center" style="margin-bottom: 1.5rem;">
+                        <div class="col-md-8">
+                            <h3 class="milestone-title">Assistant Professor of Vascular Surgery</h3>
+                            <p><strong>Institution:</strong> Vascular unit, Department of general surgery, AI Zahraa University hospital</p>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="date-duration-card">
+                                <div class="date-range">04 Jan 1995 - 02 May 2000</div>
+                                <div class="duration-badge">5 Years 4 Months</div>
+                            </div>
+                        </div>
                     </div>
+                </div>
 
                 <!-- Professor -->
                 <div class="milestone-card" style="margin-bottom: 2rem;">
-                    <h3 class="milestone-title">Professor of Vascular Surgery, Head of Vascular Surgery Unit (3/5/2000 - 31/07/2015)</h3>
-                    <p><strong>Institution:</strong> Vascular unit, Department of general surgery, AI Zahraa University hospital</p>
+                    <div class="row align-items-center" style="margin-bottom: 1.5rem;">
+                        <div class="col-md-8">
+                            <h3 class="milestone-title">Professor of Vascular Surgery, Head of Vascular Surgery Unit</h3>
+                            <p><strong>Institution:</strong> Vascular unit, Department of general surgery, AI Zahraa University hospital</p>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="date-duration-card">
+                                <div class="date-range">03 May 2000 - 31 Jul 2015</div>
+                                <div class="duration-badge">15 Years 3 Months</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Head of Surgery Departments -->
                 <div class="milestone-card" style="margin-bottom: 2rem;">
-                    <h3 class="milestone-title">Head of Surgery Departments (5/8/2012 - 31/07/2015)</h3>
-                    <p><strong>Departments:</strong> General surgery, Vascular surgery, Pediatric Surgery, Cardio-Thoracic Surgery, Esthetic Surgery</p>
-                    <p><strong>Institution:</strong> AI Zahraa University hospital, AI Azhar faculty of Medicine for girls Cairo, Egypt</p>
+                    <div class="row align-items-center" style="margin-bottom: 1.5rem;">
+                        <div class="col-md-8">
+                            <h3 class="milestone-title">Head of Surgery Departments</h3>
+                            <p><strong>Departments:</strong> General surgery, Vascular surgery, Pediatric Surgery, Cardio-Thoracic Surgery, Esthetic Surgery</p>
+                            <p><strong>Institution:</strong> AI Zahraa University hospital, AI Azhar faculty of Medicine for girls Cairo, Egypt</p>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="date-duration-card">
+                                <div class="date-range">05 Aug 2012 - 31 Jul 2015</div>
+                                <div class="duration-badge">3 Years</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Present Appointment -->
-                        <div class="milestone-card">
-                    <h3 class="milestone-title">PRESENT APPOINTMENT</h3>
-                    <div class="career-highlight">
-                        <h4>Emeritus Professor of Vascular Surgery (1/8/2015 - Present)</h4>
-                        <p><strong>Institution:</strong> Department of vascular and endovascular surgery, AI Zahraa University hospital, AI Azhar faculty of Medicine for girls Cairo, Egypt</p>
+                <div class="milestone-card">
+                    <div class="row align-items-center" style="margin-bottom: 1.5rem;">
+                        <div class="col-md-8">
+                            <h3 class="milestone-title">PRESENT APPOINTMENT</h3>
+                            <h4 style="color: #3498db;">Emeritus Professor of Vascular Surgery</h4>
+                            <p><strong>Institution:</strong> Department of vascular and endovascular surgery, AI Zahraa University hospital, AI Azhar faculty of Medicine for girls Cairo, Egypt</p>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="date-duration-card">
+                                <div class="date-range">01 Aug 2015 - Present</div>
+                                <div class="duration-badge">9 Years 5 Months</div>
                             </div>
                         </div>
+                    </div>
+                </div>
                     </div>
         </div>
     </section>
