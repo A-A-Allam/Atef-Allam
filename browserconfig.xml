@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+    <msapplication>
+        <tile>
+            <square70x70logo src="images/prof-atef-allam.jpg"/>
+            <square150x150logo src="images/prof-atef-allam.jpg"/>
+            <wide310x150logo src="images/prof-atef-allam.jpg"/>
+            <square310x310logo src="images/prof-atef-allam.jpg"/>
+            <TileColor>#3498db</TileColor>
+        </tile>
+        <notification>
+            <polling-uri src="https://prof-atef-allam.com/notifications/"/>
+            <frequency>30</frequency>
+            <cycle>1</cycle>
+        </notification>
+    </msapplication>
+</browserconfig>

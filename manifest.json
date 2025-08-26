@@ -1,0 +1,89 @@
+{
+    "name": "Professor Atef Allam - Vascular Surgery Pioneer",
+    "short_name": "Prof. Atef Allam",
+    "description": "Emeritus Professor of Vascular & Endovascular Surgery with 44+ years excellence. Pioneer of endovascular surgery in Egypt.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#3498db",
+    "orientation": "any",
+    "scope": "/",
+    "lang": "en",
+    "categories": ["medical", "education", "professional"],
+    "icons": [
+        {
+            "src": "images/prof-atef-allam.jpg",
+            "sizes": "192x192",
+            "type": "image/jpeg",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "images/prof-atef-allam.jpg",
+            "sizes": "512x512",
+            "type": "image/jpeg",
+            "purpose": "any maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "images/prof-atef-allam.jpg",
+            "sizes": "1280x720",
+            "type": "image/jpeg",
+            "form_factor": "wide",
+            "label": "Professor Atef Allam's Professional Website"
+        },
+        {
+            "src": "images/prof-atef-allam.jpg",
+            "sizes": "750x1334",
+            "type": "image/jpeg",
+            "form_factor": "narrow",
+            "label": "Mobile view of Professor Atef Allam's website"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Career Journey",
+            "short_name": "Career",
+            "description": "Explore Professor Allam's distinguished career",
+            "url": "/career.html",
+            "icons": [
+                {
+                    "src": "images/prof-atef-allam.jpg",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "Presentations",
+            "short_name": "Presentations",
+            "description": "View medical presentations and research",
+            "url": "/#presentations",
+            "icons": [
+                {
+                    "src": "images/prof-atef-allam.jpg",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "Lectures",
+            "short_name": "Lectures",
+            "description": "Access educational lectures",
+            "url": "/lectures.html",
+            "icons": [
+                {
+                    "src": "images/prof-atef-allam.jpg",
+                    "sizes": "96x96"
+                }
+            ]
+        }
+    ],
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "edge_side_panel": {
+        "preferred_width": 400
+    },
+    "launch_handler": {
+        "client_mode": "navigate-existing"
+    }
+}
