@@ -509,6 +509,77 @@ body::after {
 }
 
 /* ========================================
+   UNIFIED CARD SYSTEM - CONSISTENT HARMONY
+   ======================================== */
+
+/* Universal Card Base Styles */
+.unified-card-base {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.unified-card-base::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(116, 185, 255, 0.05) 0%, 
+    transparent 25%, 
+    rgba(116, 185, 255, 0.02) 50%, 
+    transparent 75%, 
+    rgba(116, 185, 255, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.unified-card-base:hover::before {
+  opacity: 1;
+}
+
+.unified-card-base:hover {
+  transform: translateY(-10px);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 100%);
+  border-color: rgba(116, 185, 255, 0.3);
+  box-shadow: 
+    0 25px 60px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(116, 185, 255, 0.1);
+}
+
+/* Universal Grid System */
+.unified-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Override Bootstrap columns for unified grid */
+.unified-grid > [class*="col-"] {
+  width: auto !important;
+  flex: none !important;
+  max-width: none !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* ========================================
    ELEGANT LINE STYLING SYSTEM
    ======================================== */
 
@@ -746,21 +817,70 @@ body::after {
   background: rgba(255, 255, 255, 0.02);
 }
 
+/* Expertise Section Grid */
+#expertise .row {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+#expertise .row > [class*="col-"] {
+  width: auto !important;
+  flex: none !important;
+  max-width: none !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 .expertise-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  transition: all 0.3s ease;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.expertise-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(116, 185, 255, 0.05) 0%, 
+    transparent 25%, 
+    rgba(116, 185, 255, 0.02) 50%, 
+    transparent 75%, 
+    rgba(116, 185, 255, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.expertise-card:hover::before {
+  opacity: 1;
 }
 
 .expertise-card:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transform: translateY(-10px);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 100%);
+  border-color: rgba(116, 185, 255, 0.3);
+  box-shadow: 
+    0 25px 60px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(116, 185, 255, 0.1);
 }
 
 .expertise-card h3 {
@@ -833,7 +953,7 @@ body::after {
 /* Full-width stunning publications layout */
 #publications .row.max + .row.max {
   display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 2rem;
   width: 100%;
   max-width: 1400px;
@@ -943,7 +1063,7 @@ body::after {
 /* Full-width stunning presentations layout */
 #presentations .row.max + .row.max {
   display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 2rem;
   width: 100%;
   max-width: 1400px;
@@ -1076,18 +1196,38 @@ body::after {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
+/* Individual Presentation Cards Grid - One Row Layout */
+#featured-presentations {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+#featured-presentations > [class*="col-"] {
+  width: auto !important;
+  flex: none !important;
+  max-width: none !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 /* Individual Presentation Cards */
 .presentation-card {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 20px;
-  padding: 2rem 1.5rem;
+  padding: 2.5rem 2rem;
   text-align: center;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   height: 100%;
+  min-height: 320px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1102,12 +1242,12 @@ body::after {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, 
-    rgba(52, 152, 219, 0.02) 0%, 
+  background: linear-gradient(135deg, 
+    rgba(116, 185, 255, 0.05) 0%, 
     transparent 25%, 
-    rgba(52, 152, 219, 0.01) 50%, 
+    rgba(116, 185, 255, 0.02) 50%, 
     transparent 75%, 
-    rgba(52, 152, 219, 0.02) 100%);
+    rgba(116, 185, 255, 0.05) 100%);
   opacity: 0;
   transition: opacity 0.4s ease;
   pointer-events: none;
@@ -1118,11 +1258,12 @@ body::after {
 }
 
 .presentation-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(52, 152, 219, 0.3);
+  transform: translateY(-10px);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 100%);
+  border-color: rgba(116, 185, 255, 0.3);
   box-shadow: 
-    0 20px 60px rgba(0, 0, 0, 0.4),
-    0 0 0 1px rgba(52, 152, 219, 0.1);
+    0 25px 60px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(116, 185, 255, 0.1);
 }
 
 .card-icon {
@@ -1397,7 +1538,19 @@ body::after {
   /* Tablet presentations layout */
   #publications .row.max + .row.max,
   #presentations .row.max + .row.max {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+  }
+  
+  #expertise .row {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+  }
+  
+  #featured-presentations {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
     gap: 1.5rem;
     padding: 0 1.5rem;
   }
@@ -1778,6 +1931,20 @@ body::after {
   /* Mobile-optimized presentations/publications */
   #publications .row.max + .row.max,
   #presentations .row.max + .row.max {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  #expertise .row {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  #featured-presentations {
     display: grid !important;
     grid-template-columns: 1fr !important;
     gap: 1.5rem;
