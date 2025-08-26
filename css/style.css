@@ -1350,6 +1350,50 @@ body::after {
     padding: 0 1.5rem;
   }
   
+  /* Mobile hamburger button */
+  .mobile-menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 10000;
+  }
+  
+  .mobile-menu-toggle:hover {
+    background: rgba(116, 185, 255, 0.1);
+  }
+  
+  .hamburger-line {
+    width: 24px;
+    height: 2px;
+    background: #ffffff;
+    margin: 3px 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+  }
+  
+  .mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  
+  .mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
   .nav-item {
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -1796,50 +1840,7 @@ body::after {
     box-shadow: 0 0 10px rgba(116, 185, 255, 0.4);
   }
   
-  /* Mobile Responsive */
-  @media (max-width: 768px) {
-    .career-timeline {
-      padding: 2rem 1rem;
-    }
-    
-    .career-timeline::before {
-      left: 2rem;
-    }
-    
-    .career-milestone {
-      justify-content: flex-start !important;
-      margin-bottom: 4rem;
-      padding-left: 5rem;
-      min-height: 150px;
-    }
-    
-    .milestone-content {
-      width: auto !important;
-      margin: 0 !important;
-      text-align: left !important;
-    }
-    
-    .milestone-year {
-      left: -2.5rem !important;
-      right: auto !important;
-      width: 140px;
-      height: 50px;
-      font-size: 0.9rem;
-      padding: 0.8rem 1.2rem;
-    }
-    
-    .milestone-connector {
-      display: none;
-    }
-    
-    .milestone-title {
-      font-size: 1.5rem;
-    }
-    
-    .milestone-description {
-      font-size: 1.1rem;
-    }
-  }
+  /* Career Timeline Mobile Styles - Moved to main mobile section */
 
   .section-banner .col-md-offset-3 {
     margin-left: 0;
@@ -1896,6 +1897,87 @@ body::after {
     tap-highlight-color: rgba(116, 185, 255, 0.2);
     position: relative;
     overflow: hidden;
+  }
+  
+  /* Career Timeline Mobile Styles */
+  .career-timeline {
+    padding: 2rem 1rem;
+  }
+  
+  .career-timeline::before {
+    left: 2rem;
+  }
+  
+  .career-milestone {
+    justify-content: flex-start !important;
+    margin-bottom: 4rem;
+    padding-left: 5rem;
+    min-height: 150px;
+  }
+  
+  .milestone-content {
+    width: auto !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+  
+  .milestone-year {
+    left: -2.5rem !important;
+    right: auto !important;
+    width: 140px;
+    height: 50px;
+    font-size: 0.9rem;
+    padding: 0.8rem 1.2rem;
+  }
+  
+  .milestone-connector {
+    display: none;
+  }
+  
+  .milestone-title {
+    font-size: 1.5rem;
+  }
+  
+  .milestone-description {
+    font-size: 1.1rem;
+  }
+  
+  /* Presentation Mobile Styles */
+  .presentation-title {
+    font-size: 2.5rem;
+  }
+  
+  .presentation-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .content-section {
+    padding: 25px;
+    margin: 40px 0;
+  }
+  
+  .content-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .content-section h3 {
+    font-size: 1.4rem;
+  }
+  
+  .content-section h4 {
+    font-size: 1.2rem;
+  }
+  
+  .content-text, .content-section p, .content-section ul, .content-section ol {
+    font-size: 1rem;
+  }
+  
+  .presentation-meta {
+    gap: 20px;
+  }
+  
+  .presentation-meta span {
+    font-size: 0.9rem;
   }
   
   .presentation-card::after {
@@ -2674,45 +2756,7 @@ body::after {
   margin-top: 4rem;
 }
 
-/* Presentation-specific responsive styles */
-@media (max-width: 768px) {
-  .presentation-title {
-    font-size: 2.5rem;
-  }
-  
-  .presentation-subtitle {
-    font-size: 1.1rem;
-  }
-  
-  .content-section {
-    padding: 25px;
-    margin: 40px 0;
-  }
-  
-  .content-section h2 {
-    font-size: 1.8rem;
-  }
-  
-  .content-section h3 {
-    font-size: 1.4rem;
-  }
-  
-  .content-section h4 {
-    font-size: 1.2rem;
-  }
-  
-  .content-text, .content-section p, .content-section ul, .content-section ol {
-    font-size: 1rem;
-  }
-  
-  .presentation-meta {
-    gap: 20px;
-  }
-  
-  .presentation-meta span {
-    font-size: 0.9rem;
-  }
-}
+/* Presentation-specific responsive styles - Consolidated into main mobile sections */
 
 @media (max-width: 480px) {
   .presentation-title {
