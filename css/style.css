@@ -2197,6 +2197,11 @@ body::after {
 /* Import Nobile font for the new menu */
 @import url(https://fonts.googleapis.com/css?family=Nobile);
 
+/* Hide mobile header on desktop by default */
+.header {
+  display: none;
+}
+
 /* Show mobile header only on mobile devices */
 @media (max-width: 767px) {
   .header {
