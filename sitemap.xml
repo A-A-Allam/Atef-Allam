@@ -40,7 +40,7 @@
 
     <!-- Book Reviews Page -->
     <url>
-        <loc>https://profatefallam.com/book-reviews.html</loc>
+        <loc>https://profatefallam.com/books.html</loc>
         <lastmod>2025-01-26T10:00:00+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -49,7 +49,7 @@
 
     <!-- Civilizational Reflections Page -->
     <url>
-        <loc>https://profatefallam.com/civilizational-reflections.html</loc>
+        <loc>https://profatefallam.com/reflections.html</loc>
         <lastmod>2025-01-26T10:00:00+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -90,7 +90,7 @@
     </url>
 
     <url>
-        <loc>https://profatefallam.com/presentations/petti-coat.html</loc>
+        <loc>https://profatefallam.com/presentations/petticoat-technique.html</loc>
         <lastmod>2025-01-26T10:00:00+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -156,7 +156,7 @@
     </url>
 
     <url>
-        <loc>https://profatefallam.com/presentations/fea-cases.html</loc>
+        <loc>https://profatefallam.com/presentations/finite-element-analysis.html</loc>
         <lastmod>2025-01-26T10:00:00+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -213,7 +213,7 @@
     </url>
 
     <url>
-        <loc>https://profatefallam.com/presentations/nih-comprehensive.html</loc>
+        <loc>https://profatefallam.com/presentations/neointimal-hyperplasia-comprehensive.html</loc>
         <lastmod>2025-01-26T10:00:00+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -221,7 +221,7 @@
     </url>
 
     <url>
-        <loc>https://profatefallam.com/presentations/nih-future.html</loc>
+        <loc>https://profatefallam.com/presentations/neointimal-hyperplasia-future.html</loc>
         <lastmod>2025-01-26T10:00:00+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
