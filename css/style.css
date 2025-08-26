@@ -194,8 +194,9 @@ body::after {
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   padding: 2rem;
-  min-width: 1000px;
+  min-width: 900px;
   max-width: calc(100vw - 4rem);
+  width: max-content;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -208,10 +209,29 @@ body::after {
 
 /* JavaScript will handle smart positioning dynamically */
 
+/* Smart positioning for dropdowns near screen edges */
+.dropdown-container:last-child .mega-dropdown,
+.dropdown-container:nth-last-child(2) .mega-dropdown {
+  left: auto;
+  right: 0;
+  transform: translateX(0);
+}
+
+.dropdown-container:hover .mega-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-container:last-child:hover .mega-dropdown,
+.dropdown-container:nth-last-child(2):hover .mega-dropdown {
+  transform: translateX(0) translateY(0);
+}
+
 /* Responsive dropdown sizing */
 @media (max-width: 1200px) {
   .mega-dropdown {
-    min-width: 800px;
+    min-width: 700px;
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -240,12 +260,6 @@ body::after {
     transform: translateX(-50%) translateY(-10px);
   }
 
-}
-
-.dropdown-container:hover .mega-dropdown {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(0);
 }
 
 /* Hover state will be handled dynamically by JavaScript */
