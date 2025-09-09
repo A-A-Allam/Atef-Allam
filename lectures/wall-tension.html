@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wall Tension & Surgical Planning - Professor Atef Allam</title>
+    <meta name="description" content="Practical guide to using wall tension calculations in surgical decision-making">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #000000;
+            background: #fafafa;
+            line-height: 1.6;
+        }
+        
+        .nav-bar {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid #e5e5e5;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-brand {
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: #000000;
+        }
+        
+        .back-link {
+            color: #000000;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        .lecture-header {
+            text-align: center;
+            padding: 2rem 0 4rem 0;
+            margin-bottom: 4rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .lecture-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 1rem;
+        }
+        
+        .lecture-subtitle {
+            font-size: 1.125rem;
+            color: #000000;
+            margin-bottom: 2rem;
+        }
+        
+        .lecture-meta {
+            color: #000000;
+        }
+        
+        .foundation-box {
+            background: #fafafa;
+            color: #000000;
+            border-radius: 16px;
+            padding: 3rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .formula-display {
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            font-family: 'SF Mono', monospace;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        
+        .section-title {
+            font-size: 1.875rem;
+            font-weight: 600;
+            color: #000000;
+            margin: 3rem 0 2rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .application-card {
+            background: #fafafa;
+            border: 1px solid #e5e5e5;
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 2px solid #666666;
+        }
+        
+        .calculation-example {
+            background: #fafafa;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'SF Mono', monospace;
+            text-align: center;
+        }
+        
+        .medical-term {
+            font-weight: 600;
+            color: #000000;
+        }
+        
+        .threshold-value {
+            font-weight: 600;
+            color: #000000;
+        }
+        
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #000000;
+        }
+        
+        .key-takeaways {
+            background: #fafafa;
+            border-radius: 16px;
+            padding: 3rem;
+            margin: 3rem 0;
+            border-left: 2px solid #666666;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .lecture-title { font-size: 2rem; }
+            .main-content { padding: 2rem 1rem; }
+            .foundation-box { padding: 2rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="../Atef Allam New Website/index.html" class="nav-brand">Prof. Atef Allam</a>
+            <a href="../Atef Allam New Website/lectures.html" class="back-link">← Back to Lectures</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <header class="lecture-header">
+            <h1 class="lecture-title">Wall Tension in Surgical Planning</h1>
+            <p class="lecture-subtitle">A Practical Guide to Biomechanical Decision-Making</p>
+            <div class="lecture-meta">
+                <strong>Professor Atef Allam</strong> • Surgical Planning • Risk Assessment
+        </div>
+    </header>
+
+        <div class="foundation-box">
+            <h2>Laplace's Law: The Foundation</h2>
+            <div class="formula-display">T = P × r</div>
+            <p style="margin-top: 1rem;">
+                <strong>T:</strong> Wall tension (N/m) • <strong>P:</strong> Pressure • <strong>r:</strong> Radius
+                                </p>
+                            </div>
+
+        <h2 class="section-title">Clinical Applications</h2>
+
+        <div class="application-card">
+            <h3>🫀 Aortic Aneurysms</h3>
+            <p><strong>Risk Threshold:</strong> T <span class="threshold-value">> 120 N/m</span> → High risk → Repair recommended</p>
+            
+            <h4 style="margin: 1.5rem 0 1rem 0;">Progressive Risk Example:</h4>
+            <div class="calculation-example">AAA: r = 3 cm, P = 120 mmHg → T = 36 N/m (Low Risk)</div>
+            <div class="calculation-example">Expands to r = 5 cm → T = 60 N/m (Intermediate)</div>
+            <div class="calculation-example">With hypertension P = 180 mmHg → T = 90 N/m (High Risk)</div>
+            
+            <ul style="margin-top: 1rem;">
+                <li><span class="medical-term">Open Repair:</span> High tension + complex anatomy</li>
+                <li><span class="medical-term">EVAR:</span> Lower tension with suitable anatomy</li>
+                                </ul>
+                        </div>
+
+        <div class="application-card" style="border-left-color: #000000;">
+            <h3>⚡ Aortic Dissection</h3>
+            <ul>
+                <li>Higher tension zones (ascending) → Urgent surgery</li>
+                <li>Lower tension zones (descending) → Medical management if stable</li>
+                                </ul>
+                        </div>
+
+        <div class="application-card" style="border-left-color: #000000;">
+            <h3>🩸 Vein Grafts (CABG)</h3>
+            <p>Veins in arterial pressure: ↑ r → ↑ T → Graft failure risk</p>
+            <ul>
+                <li>Select thick-walled veins (saphenous)</li>
+                <li>Use arterial grafts (LIMA) when possible</li>
+                            </ul>
+                        </div>
+
+        <h2 class="section-title">Case Example: AAA Decision</h2>
+                        
+        <div class="application-card">
+                                <h3>Patient Data:</h3>
+                                <ul>
+                <li>AAA diameter: 5.5 cm</li>
+                <li>BP: 160/90 mmHg</li>
+                <li>T = 160 × 2.75 = 44 N/m</li>
+                                </ul>
+                                
+            <h3 style="margin-top: 1.5rem;">Decision Matrix:</h3>
+            <ul>
+                <li><span class="medical-term">EVAR:</span> Check anatomy, suitable for moderate tension</li>
+                <li><span class="medical-term">Open Repair:</span> If tension >60 N/m or complex anatomy</li>
+                                </ul>
+                            </div>
+
+        <div class="key-takeaways">
+            <h2>Essential Surgical Principle</h2>
+            <p style="font-size: 1.125rem; font-style: italic;">
+                "Wall tension calculations transform abstract biomechanics into life-saving surgical decisions. 
+                Every major vascular intervention should consider tension thresholds alongside anatomic factors."
+            </p>
+        </div>
+    </main>
+</body>
+</html>

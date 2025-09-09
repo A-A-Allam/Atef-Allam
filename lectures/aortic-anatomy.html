@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normal Aortic Anatomy & Indexing - Professor Atef Allam</title>
+    <meta name="description" content="Comprehensive analysis of aortic diameter assessment, indexing to BSA/height, and 2022 ACC/AHA guidelines">
+    
+    <style>
+        /* Apple-Style Design System */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #000000;
+            background: #fafafa;
+            overflow-x: hidden;
+        }
+        
+        /* Navigation */
+        .nav-bar {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid #e5e5e5;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-brand {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #000000;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: #000000;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: #000000;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #000000;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        
+        .back-link:hover {
+            color: #000000;
+        }
+        
+        /* Main Content */
+        .main-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        /* Header */
+        .lecture-header {
+            text-align: center;
+            padding: 2rem 0 4rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            margin-bottom: 4rem;
+        }
+        
+        .lecture-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            line-height: 1.2;
+            color: #000000;
+            margin-bottom: 1rem;
+        }
+        
+        .lecture-subtitle {
+            font-size: 1.125rem;
+            color: #000000;
+            margin-bottom: 2rem;
+        }
+        
+        .lecture-meta {
+            font-size: 1rem;
+            color: #000000;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            margin-bottom: 4rem;
+        }
+        
+        .section-title {
+            font-size: 1.875rem;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .subsection-title {
+            font-size: 1.375rem;
+            font-weight: 500;
+            color: #000000;
+            margin: 2rem 0 1rem 0;
+        }
+        
+        .content-text {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #000000;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Info Boxes */
+        .info-box {
+            background: #fafafa;
+            border: 1px solid #e5e5e5;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+        
+        .info-box.highlight {
+            background: #fafafa;
+            border-color: #000000;
+        }
+        
+        .info-box.warning {
+            background: #fafafa;
+            border-color: #000000;
+        }
+        
+        .info-box h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 1rem;
+        }
+        
+        /* Lists */
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.6;
+        }
+        
+        li::before {
+            content: '•';
+            color: #000000;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Tables */
+        .table-container {
+            margin: 2rem 0;
+            overflow-x: auto;
+            border-radius: 12px;
+            border: 1px solid #e5e5e5;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fafafa;
+        }
+        
+        th {
+            background: #fafafa;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            color: #000000;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid #f0f0f0;
+            color: #000000;
+        }
+        
+        /* Medical Terms & Values */
+        .medical-term {
+            font-weight: 600;
+            color: #000000;
+        }
+        
+        .value {
+            font-weight: 500;
+            color: #000000;
+        }
+        
+        .formula {
+            font-family: 'SF Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
+            background: #fafafa;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.125rem;
+            font-weight: 500;
+            margin: 2rem 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .main-content {
+                padding: 2rem 1rem;
+            }
+            
+            .lecture-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .info-box {
+                padding: 1.5rem;
+            }
+            
+            table {
+                font-size: 0.9rem;
+            }
+            
+            th, td {
+                padding: 0.75rem;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            .nav-bar {
+                display: none;
+            }
+            
+            .main-content {
+                margin-top: 0;
+                padding: 1rem;
+            }
+            
+            .info-box {
+                background: #f9f9f9 !important;
+                border: 1px solid #cccccc !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="../Atef Allam New Website/index.html" class="nav-brand">Prof. Atef Allam</a>
+            <div class="nav-links">
+                <a href="../Atef Allam New Website/lectures.html" class="back-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m15 18-6-6 6-6"/>
+                    </svg>
+                    Back to Lectures
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="lecture-header">
+            <h1 class="lecture-title">Normal Aortic Anatomy and Indexing to Height/BSA/CSA</h1>
+            <p class="lecture-subtitle">Comprehensive Analysis of Aortic Diameter Assessment and Risk Stratification</p>
+            <div class="lecture-meta">
+                <strong>Professor Atef Allam</strong> • Advanced Vascular Surgery • Clinical Guidelines
+            </div>
+        </header>
+
+        <!-- Section 1: Normal Aortic Anatomy and Indexing -->
+        <section class="content-section">
+            <h2 class="section-title">1. Normal Aortic Anatomy and Indexing</h2>
+            
+            <p class="content-text">
+                The aorta's diameter varies by age, sex, and body size. Indexing aortic size to <span class="medical-term">body surface area (BSA)</span> or height improves risk stratification, especially in smaller individuals (e.g., women, Asians).
+            </p>
+
+            <div class="info-box highlight">
+                <h3>Normal Diameters (2022 ACC/AHA Guidelines):</h3>
+                <ul>
+                    <li><span class="medical-term">Ascending aorta:</span> <span class="value">≤3.5 cm</span> (men), <span class="value">≤3.3 cm</span> (women)</li>
+                    <li><span class="medical-term">Descending aorta:</span> <span class="value">≤2.8 cm</span></li>
+                    <li><span class="medical-term">Abdominal aorta:</span> <span class="value">≤3.0 cm</span></li>
+                </ul>
+            </div>
+
+            <h3 class="subsection-title">Aortic Size Index (ASI)</h3>
+            
+            <div class="formula">
+                ASI = Max aortic diameter (cm) / BSA (m²)
+            </div>
+
+            <ul>
+                <li>ASI <span class="value">≥2.75 cm/m²</span> (ascending aorta) indicates higher rupture risk</li>
+                <li><span class="medical-term">Height-indexing:</span> Some studies suggest aortic diameter/height (cm/m) <span class="value">>1.8–2.0</span> as a risk threshold</li>
+            </ul>
+
+            <div class="info-box warning">
+                <h3>Clinical Implications:</h3>
+                <ul>
+                    <li><span class="medical-term">Marfan syndrome:</span> Intervention considered at ASI <span class="value">≥2.5 cm/m²</span> even if absolute diameter is <span class="value"><5.0 cm</span></li>
+                    <li><span class="medical-term">Small-stature patients:</span> Absolute diameter thresholds may underestimate risk; indexing is critical</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 2: Aortic Imaging Recommendations -->
+        <section class="content-section">
+            <h2 class="section-title">2. Aortic Imaging Recommendations</h2>
+            
+            <h3 class="subsection-title">Modalities & Frequency</h3>
+            
+            <div class="info-box">
+                <h3>Echocardiography (TTE/TEE):</h3>
+                <ul>
+                    <li>First-line for ascending aorta (e.g., bicuspid valve, Marfan)</li>
+                    <li><span class="medical-term">Surveillance:</span> Every <span class="value">6–12 months</span> if high-risk (e.g., growth <span class="value">>0.3 cm/year</span>)</li>
+                </ul>
+            </div>
+
+            <div class="info-box highlight">
+                <h3>CT Angiography (CTA):</h3>
+                <ul>
+                    <li>Gold standard for dissection, aneurysms, pre-op planning</li>
+                    <li>Low-dose protocols reduce radiation (e.g., ECG-gated CTA)</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>MRI/MRA:</h3>
+                <ul>
+                    <li>Preferred for young patients, serial monitoring (no radiation)</li>
+                    <li><span class="medical-term">4D Flow MRI:</span> Assesses wall shear stress, predicts dissection risk</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>PET-CT:</h3>
+                <p class="content-text">For aortitis (e.g., FDG uptake in vasculitis)</p>
+            </div>
+
+            <div class="info-box highlight">
+                <h3>2022 ESC Imaging Guidelines:</h3>
+                <ul>
+                    <li>Baseline imaging for all first-degree relatives of aortic dissection patients</li>
+                    <li>Annual imaging if aorta <span class="value">>4.0 cm</span> or genetic aortopathy</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 3: Change in Size Threshold for TAA Repair -->
+        <section class="content-section">
+            <h2 class="section-title">3. Change in Size Threshold for TAA Repair & Supporting Evidence</h2>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Population</th>
+                            <th>Old Threshold</th>
+                            <th>2022 ACC/AHA Threshold</th>
+                            <th>Evidence</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>General population</td>
+                            <td>≥5.5 cm</td>
+                            <td>≥5.5 cm</td>
+                            <td>IRAD registry data</td>
+                        </tr>
+                        <tr>
+                            <td>Bicuspid aortic valve</td>
+                            <td>≥5.0 cm</td>
+                            <td>≥5.0 cm</td>
+                            <td>Increased dissection risk at smaller sizes</td>
+                        </tr>
+                        <tr>
+                            <td>Marfan syndrome</td>
+                            <td>≥5.0 cm</td>
+                            <td>≥4.5–5.0 cm</td>
+                            <td>GEN-TAC registry</td>
+                        </tr>
+                        <tr>
+                            <td>Loeys-Dietz syndrome</td>
+                            <td>≥4.5 cm</td>
+                            <td>≥4.2–4.5 cm</td>
+                            <td>High rupture risk</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="info-box warning">
+                <h3>Key Studies Supporting Lower Thresholds:</h3>
+                <ul>
+                    <li><span class="medical-term">German Marfan Registry (2021):</span> <span class="value">25%</span> of dissections occurred at <span class="value"><5.0 cm</span></li>
+                    <li><span class="medical-term">IRAD Substudy (2022):</span> Bicuspid valve patients had dissections at <span class="value">4.6–5.0 cm</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 4: AAA & TAAA Guidelines -->
+        <section class="content-section">
+            <h2 class="section-title">4. AAA & Thoracoabdominal Aneurysm (TAAA) Guidelines</h2>
+            
+            <h3 class="subsection-title">AAA (2023 SVS Update)</h3>
+            
+            <div class="info-box highlight">
+                <h3>Intervention Threshold:</h3>
+                <ul>
+                    <li><span class="medical-term">Men:</span> <span class="value">≥5.5 cm</span> (EVAR preferred if anatomy permits)</li>
+                    <li><span class="medical-term">Women:</span> <span class="value">≥5.0 cm</span> (higher rupture risk at smaller sizes)</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>Surveillance:</h3>
+                <ul>
+                    <li><span class="value">3.0–3.9 cm:</span> Every 3 years</li>
+                    <li><span class="value">4.0–5.4 cm:</span> Every 6–12 months</li>
+                </ul>
+            </div>
+
+            <h3 class="subsection-title">TAAA (2023 ESVS Guidelines)</h3>
+            
+            <div class="info-box">
+                <ul>
+                    <li><span class="medical-term">Open Repair:</span> Still gold standard for extensive Crawford I-III aneurysms</li>
+                    <li><span class="medical-term">F/B-EVAR:</span> Preferred for high-risk patients if ≥4 experienced centers</li>
+                    <li><span class="medical-term">Spinal Cord Protection:</span> CSF drainage + staged repair reduces paraplegia risk</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Summary -->
+        <section class="content-section">
+            <div class="info-box highlight">
+                <h3>Clinical Summary</h3>
+                <p class="content-text">
+                    Aortic disease management is increasingly personalized, integrating imaging, genetics, and advanced endovascular techniques. Key shifts include lower size thresholds for high-risk genetics, TEVAR dominance in TBAD/descending aneurysms, and strict BP control + activity restrictions to prevent progression.
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

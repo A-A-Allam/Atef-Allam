@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aortic Biopsy Techniques - Professor Atef Allam</title>
+    <meta name="description" content="Comprehensive surgical guide to arterial biopsy techniques covering aortic, carotid, renal, and coronary approaches with risk assessment">
+    
+    <style>
+        /* Apple-Style Design System */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #000000;
+            background: #fafafa;
+            overflow-x: hidden;
+        }
+        
+        /* Navigation */
+        .nav-bar {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid #e5e5e5;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-brand {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #000000;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #000000;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        
+        .back-link:hover {
+            color: #000000;
+        }
+        
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        /* Header */
+        .lecture-header {
+            text-align: center;
+            padding: 2rem 0 4rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            margin-bottom: 4rem;
+        }
+        
+        .lecture-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            line-height: 1.2;
+            color: #000000;
+            margin-bottom: 1rem;
+        }
+        
+        .lecture-subtitle {
+            font-size: 1.125rem;
+            color: #000000;
+            margin-bottom: 2rem;
+        }
+        
+        .lecture-meta {
+            font-size: 1rem;
+            color: #000000;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            margin-bottom: 5rem;
+        }
+        
+        .section-title {
+            font-size: 1.875rem;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .subsection-title {
+            font-size: 1.375rem;
+            font-weight: 500;
+            color: #000000;
+            margin: 2rem 0 1rem 0;
+        }
+        
+        /* Risk Assessment Boxes */
+        .risk-box {
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+        
+        .risk-box.high-risk {
+            background: #fafafa;
+            border: 1px solid #e5e5e5;
+            border-left: 2px solid #666666;
+        }
+        
+        .risk-box.low-risk {
+            background: #fafafa;
+            border: 1px solid #e5e5e5;
+            border-left: 2px solid #666666;
+        }
+        
+        .risk-box h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 1rem;
+        }
+        
+        /* Technique Tables */
+        .technique-table-container {
+            margin: 2rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e5e5e5;
+        }
+        
+        .technique-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fafafa;
+        }
+        
+        .technique-table th {
+            background: #fafafa;
+            padding: 1rem 1.5rem;
+            text-align: left;
+            font-weight: 600;
+            color: #000000;
+            border-bottom: 1px solid #e5e5e5;
+            font-size: 0.9rem;
+        }
+        
+        .technique-table td {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #f0f0f0;
+            color: #000000;
+            font-size: 0.9rem;
+            vertical-align: top;
+        }
+        
+        .technique-table tbody tr:hover {
+            background: #fafafa;
+        }
+        
+        .method-name {
+            font-weight: 600;
+            color: #000000;
+        }
+        
+        /* Lists */
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.6;
+        }
+        
+        li::before {
+            content: '•';
+            color: #000000;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Medical Terms */
+        .medical-term {
+            font-weight: 600;
+            color: #000000;
+        }
+        
+        /* Key Takeaways */
+        .key-takeaways {
+            background: #fafafa;
+            border: 1px solid #e5e5e5;
+            border-radius: 16px;
+            padding: 3rem;
+            margin: 3rem 0;
+            border-left: 2px solid #666666;
+        }
+        
+        .checkmark {
+            color: #000000;
+            font-size: 1.25rem;
+            margin-right: 0.5rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 2rem 1rem;
+            }
+            
+            .lecture-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .risk-box {
+                padding: 1.5rem;
+            }
+            
+            .technique-table-container {
+                overflow-x: auto;
+            }
+            
+            .technique-table {
+                min-width: 600px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="../Atef Allam New Website/index.html" class="nav-brand">Prof. Atef Allam</a>
+            <div class="nav-links">
+                <a href="../Atef Allam New Website/lectures.html" class="back-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m15 18-6-6 6-6"/>
+                    </svg>
+                    Back to Lectures
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="lecture-header">
+            <h1 class="lecture-title">Aortic Biopsy Techniques</h1>
+            <p class="lecture-subtitle">Comprehensive Surgical Guide to Arterial Biopsy Approaches</p>
+            <div class="lecture-meta">
+                <strong>Professor Atef Allam</strong> • Surgical Techniques • Risk Assessment
+            </div>
+        </header>
+
+        <!-- Aortic Biopsy -->
+        <section class="content-section">
+            <h2 class="section-title">1. Aortic Biopsy</h2>
+            
+            <div class="risk-box high-risk">
+                <h3>⚠️ High-Risk Challenges:</h3>
+                <ul>
+                    <li><span class="medical-term">High-risk location:</span> Full-thickness biopsy risks aortic rupture/dissection</li>
+                    <li>Usually diagnosed via imaging (CTA/MRI) or resected specimens</li>
+                </ul>
+            </div>
+
+            <h3 class="subsection-title">Biopsy Approaches:</h3>
+            
+            <div class="technique-table-container">
+                <table class="technique-table">
+                    <thead>
+                        <tr>
+                            <th>Method</th>
+                            <th>When Used</th>
+                            <th>Pros/Cons</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="method-name">Surgical (Open)</td>
+                            <td>During aortic aneurysm repair</td>
+                            <td>Gold standard (full-thickness sample)</td>
+                        </tr>
+                        <tr>
+                            <td class="method-name">Endovascular</td>
+                            <td>Experimental (catheter-based)</td>
+                            <td>Limited tissue, high fragmentation risk</td>
+                        </tr>
+                        <tr>
+                            <td class="method-name">Post-mortem</td>
+                            <td>Autopsy cases</td>
+                            <td>Definitive but not useful for treatment</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="risk-box low-risk">
+                <h3>✅ Recommendation:</h3>
+                <ul>
+                    <li>Avoid biopsy unless surgically resecting (e.g., aortic replacement for aneurysm)</li>
+                    <li>Intraoperative frozen section can guide repair strategy</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Carotid Artery Biopsy -->
+        <section class="content-section">
+            <h2 class="section-title">2. Carotid Artery Biopsy</h2>
+            
+            <div class="risk-box high-risk">
+                <h3>⚠️ Critical Vessel Challenges:</h3>
+                <ul>
+                    <li><span class="medical-term">Stroke risk</span> (embolism, dissection)</li>
+                    <li><span class="medical-term">Critical vessel:</span> Usually managed based on imaging (CTA/MRA)</li>
+                </ul>
+            </div>
+
+            <div class="technique-table-container">
+                <table class="technique-table">
+                    <thead>
+                        <tr>
+                            <th>Method</th>
+                            <th>When Used</th>
+                            <th>Pros/Cons</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="method-name">Open Surgical</td>
+                            <td>If carotid resection needed (e.g., aneurysm)</td>
+                            <td>Best sample, but high-risk</td>
+                        </tr>
+                        <tr>
+                            <td class="method-name">Endovascular</td>
+                            <td>Rare (high embolism risk)</td>
+                            <td>Small, fragmented tissue</td>
+                        </tr>
+                        <tr>
+                            <td class="method-name">Ultrasound-guided core needle</td>
+                            <td>Experimental (case reports)</td>
+                            <td>Less invasive but unreliable</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="risk-box low-risk">
+                <h3>✅ Recommendation:</h3>
+                <ul>
+                    <li>Biopsy only if surgery is already planned (e.g., carotid endarterectomy)</li>
+                    <li>Non-invasive imaging (MRI/MRA) preferred for diagnosis</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Key Takeaways -->
+        <section class="content-section">
+            <div class="key-takeaways">
+                <h2>Key Clinical Takeaways</h2>
+                <ul>
+                    <li><span class="checkmark">✅</span> <strong>Aorta/Carotid/Coronary:</strong> Biopsy too risky—use imaging</li>
+                    <li><span class="checkmark">✅</span> <strong>Renal/Popliteal:</strong> Biopsy only if surgery is needed</li>
+                    <li><span class="checkmark">✅</span> <strong>Mesenteric/Iliac:</strong> Biopsy rare, only during resection</li>
+                    <li><span class="checkmark">✅</span> <strong>Gold standard:</strong> Full-thickness surgical biopsy when feasible</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

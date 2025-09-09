@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon Dilation of Atheroma - Professor Atef Allam</title>
+    <meta name="description" content="Pathophysiological changes following balloon angioplasty">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #000000;
+            background: #fafafa;
+            line-height: 1.6;
+        }
+        
+        .nav-bar {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid #e5e5e5;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-brand {
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: #000000;
+        }
+        
+        .back-link {
+            color: #000000;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        .lecture-header {
+            text-align: center;
+            padding: 2rem 0 4rem 0;
+            margin-bottom: 4rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .lecture-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 1rem;
+        }
+        
+        .lecture-subtitle {
+            font-size: 1.125rem;
+            color: #000000;
+            margin-bottom: 2rem;
+        }
+        
+        .lecture-meta {
+            color: #000000;
+        }
+        
+        .introduction {
+            background: #fafafa;
+            border-radius: 16px;
+            padding: 3rem;
+            margin: 3rem 0;
+            border-left: 2px solid #666666;
+            font-size: 1.125rem;
+        }
+        
+        .section-title {
+            font-size: 1.875rem;
+            font-weight: 600;
+            color: #000000;
+            margin: 3rem 0 2rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .process-timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .process-step {
+            border-radius: 16px;
+            padding: 2.5rem;
+            color: #000000;
+            position: relative;
+        }
+        
+        .process-step.mechanical {
+            background: #fafafa;
+        }
+        
+        .process-step.acute {
+            background: #fafafa;
+        }
+        
+        .process-step.thrombotic {
+            background: #fafafa;
+        }
+        
+        .process-step.healing {
+            background: #fafafa;
+            color: #000000;
+        }
+        
+        .step-number {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+        
+        .process-step h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .mechanism-item {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            backdrop-filter: blur(5px);
+        }
+        
+        .process-step.healing .mechanism-item {
+            background: rgba(0, 0, 0, 0.05);
+        }
+        
+        .mechanism-item h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .outcomes-section {
+            background: #fafafa;
+            border-radius: 16px;
+            padding: 3rem;
+            margin: 3rem 0;
+            border-left: 2px solid #666666;
+        }
+        
+        .outcomes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .outcome-card {
+            background: #fafafa;
+            border: 1px solid #e5e5e5;
+            border-radius: 12px;
+            padding: 2rem;
+            border-left: 2px solid #666666;
+        }
+        
+        .medical-term {
+            font-weight: 600;
+            color: #000000;
+        }
+        
+        .drug-name {
+            font-weight: 500;
+            color: #000000;
+            font-style: italic;
+        }
+        
+        .statistic {
+            background: #fafafa;
+            color: #000000;
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .summary-box {
+            background: #fafafa;
+            color: #000000;
+            border-radius: 16px;
+            padding: 3rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .lecture-title { font-size: 2rem; }
+            .main-content { padding: 2rem 1rem; }
+            .process-timeline { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="../Atef Allam New Website/index.html" class="nav-brand">Prof. Atef Allam</a>
+            <a href="../Atef Allam New Website/lectures.html" class="back-link">← Back to Lectures</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <header class="lecture-header">
+            <h1 class="lecture-title">Balloon Dilation of Atheroma</h1>
+            <p class="lecture-subtitle">Pathophysiological Changes and Clinical Implications</p>
+            <div class="lecture-meta">
+                <strong>Professor Atef Allam</strong> • Interventional Techniques • Pathophysiology
+            </div>
+        </header>
+
+        <div class="introduction">
+            The pathophysiological changes following balloon dilation involve a cascade of mechanical and biological processes that lead to both immediate relief of arterial obstruction and potential complications. Understanding these mechanisms is crucial for optimizing interventional outcomes.
+        </div>
+
+        <div class="process-timeline">
+            <div class="process-step mechanical">
+                <div class="step-number">1</div>
+                <h3>Mechanical Plaque Alteration</h3>
+                
+                <div class="mechanism-item">
+                    <h4>Compression and Fracture</h4>
+                    <p>Balloon inflation compresses the atheroma against the arterial wall, fracturing the plaque and expanding the lumen.</p>
+                </div>
+                
+                <div class="mechanism-item">
+                    <h4>Endothelial Injury</h4>
+                    <p>Procedure damages endothelial layer, exposing subendothelial collagen and plaque components, activating platelets.</p>
+                </div>
+            </div>
+
+            <div class="process-step acute">
+                <div class="step-number">2</div>
+                <h3>Acute Vascular Responses</h3>
+                
+                <div class="mechanism-item">
+                    <h4>Elastic Recoil</h4>
+                    <p>Artery may partially collapse post-deflation, especially in calcified plaques, reducing lumen gain.</p>
+                </div>
+                
+                <div class="mechanism-item">
+                    <h4>Dissection & Vasospasm</h4>
+                    <p>Overstretching causes microtears; endothelial dysfunction impairs nitric oxide release.</p>
+                </div>
+            </div>
+
+            <div class="process-step thrombotic">
+                <div class="step-number">3</div>
+                <h3>Thrombotic & Inflammatory</h3>
+                
+                <div class="mechanism-item">
+                    <h4>Thrombosis Formation</h4>
+                    <p>Exposed components trigger platelet adhesion. <span class="drug-name">Antiplatelet therapy</span> critical for prevention.</p>
+                </div>
+                
+                <div class="mechanism-item">
+                    <h4>Inflammatory Response</h4>
+                    <p>Neutrophils and macrophages infiltrate, releasing cytokines and growth factors driving SMC activation.</p>
+                </div>
+            </div>
+
+            <div class="process-step healing">
+                <div class="step-number">4</div>
+                <h3>Healing & Remodeling</h3>
+                
+                <div class="mechanism-item">
+                    <h4>Neointimal Hyperplasia</h4>
+                    <p>Migrating SMCs proliferate in intima, producing extracellular matrix. Key contributor to <span class="medical-term">restenosis</span>.</p>
+                </div>
+                
+                <div class="mechanism-item">
+                    <h4>Vascular Remodeling</h4>
+                    <p>Negative: vessel contraction reduces lumen. Positive: external membrane expansion preserves patency.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="outcomes-section">
+            <h2 class="section-title">Long-Term Outcomes</h2>
+            
+            <div class="outcomes-grid">
+                <div class="outcome-card">
+                    <h3>Restenosis Risk</h3>
+                    <p>Historically, <span class="statistic">30–50%</span> experienced renarrowing. <span class="medical-term">Drug-eluting stents</span> reduce this by releasing antiproliferative agents like <span class="drug-name">sirolimus</span>.</p>
+                </div>
+                
+                <div class="outcome-card">
+                    <h3>Disease Progression</h3>
+                    <p>Balloon dilation doesn't halt underlying atherosclerosis. Comprehensive medical management remains essential for long-term outcomes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="summary-box">
+            <h2>Clinical Summary</h2>
+            <p style="font-size: 1.125rem;">
+                Balloon dilation induces acute mechanical benefits but triggers complex healing responses. Understanding these mechanisms underscores the importance of adjunctive therapies and advanced technologies to optimize patient outcomes.
+            </p>
+        </div>
+    </main>
+</body>
+</html>
