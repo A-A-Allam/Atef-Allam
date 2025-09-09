@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tissue Remodeling - Professor Atef Allam</title>
+    <meta name="description" content="Comprehensive guide to tissue remodeling mechanisms and clinical applications">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #000000;
+            background: #fafafa;
+            line-height: 1.6;
+        }
+        
+        .nav-bar {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid #e5e5e5;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-brand {
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: #000000;
+        }
+        
+        .back-link { color: #000000; text-decoration: none; font-weight: 500; }
+        
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        .lecture-header {
+            text-align: center;
+            padding: 2rem 0 4rem 0;
+            margin-bottom: 4rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .finale-badge {
+            display: inline-block;
+            background: #fafafa;
+            color: #000000;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        
+        .lecture-title {
+            font-size: 3rem;
+            font-weight: 700;
+            background: #fafafa;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+        
+        .lecture-subtitle {
+            font-size: 1.25rem;
+            color: #000000;
+            margin-bottom: 2rem;
+        }
+        
+        .lecture-meta { color: #000000; }
+        
+        .overview-section {
+            background: #fafafa;
+            color: #000000;
+            border-radius: 20px;
+            padding: 4rem;
+            margin: 4rem 0;
+        }
+        
+        .phases-section {
+            background: #fafafa;
+            border-radius: 20px;
+            padding: 4rem;
+            margin: 5rem 0;
+            border-left: 2px solid #666666;
+        }
+        
+        .phases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin: 4rem 0;
+        }
+        
+        .phase-card {
+            background: #fafafa;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .phase-1 { border-left: 2px solid #666666; }
+        .phase-2 { border-left: 2px solid #666666; }
+        .phase-3 { border-left: 2px solid #666666; }
+        
+        .scavenger-section {
+            background: #fafafa;
+            color: #000000;
+            border-radius: 20px;
+            padding: 4rem;
+            margin: 5rem 0;
+        }
+        
+        .mechanisms-section {
+            background: #fafafa;
+            border-radius: 20px;
+            padding: 4rem;
+            margin: 5rem 0;
+            border-left: 2px solid #666666;
+        }
+        
+        .clinical-section {
+            background: #fafafa;
+            border-radius: 20px;
+            padding: 4rem;
+            margin: 5rem 0;
+            border-left: 2px solid #666666;
+        }
+        
+        .therapeutic-section {
+            background: #fafafa;
+            color: #000000;
+            border-radius: 20px;
+            padding: 4rem;
+            margin: 5rem 0;
+        }
+        
+        .therapeutic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .therapy-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .future-section {
+            background: #fafafa;
+            color: #000000;
+            border-radius: 20px;
+            padding: 4rem;
+            margin: 5rem 0;
+        }
+        
+        .finale-section {
+            background: #fafafa;
+            color: #000000;
+            border-radius: 20px;
+            padding: 4rem;
+            margin: 5rem 0;
+            text-align: center;
+        }
+        
+        .takeaways-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .takeaway-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2.5rem;
+        }
+        
+        .celebration-box {
+            background: #fafafa;
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .medical-term { font-weight: 600; color: #000000; }
+        .drug-name { font-weight: 500; color: #000000; font-style: italic; }
+        .arrow { color: #000000; font-weight: bold; margin: 0 0.5rem; }
+        
+        @media (max-width: 768px) {
+            .lecture-title { font-size: 2.25rem; }
+            .main-content { padding: 2rem 1rem; }
+            .phases-grid, .therapeutic-grid, .takeaways-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="../Atef Allam New Website/index.html" class="nav-brand">Prof. Atef Allam</a>
+            <a href="../Atef Allam New Website/lectures.html" class="back-link">← Back to Lectures</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <header class="lecture-header">
+            <div class="finale-badge">🏆 GRAND FINALE - Lecture 18/18</div>
+            <h1 class="lecture-title">Tissue Remodeling</h1>
+            <p class="lecture-subtitle">The Complete Cycle: From Inflammation to Regeneration</p>
+            <div class="lecture-meta">
+                <strong>Professor Atef Allam</strong> • Advanced Pathophysiology • Series Completion
+            </div>
+        </header>
+
+        <section class="overview-section">
+            <h2 style="font-size: 2.25rem; margin-bottom: 3rem; text-align: center;">Dynamic ECM Reorganization</h2>
+            
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <p style="font-size: 1.125rem; line-height: 1.7;">
+                    <span class="medical-term">Tissue remodeling</span> is the dynamic reorganization of extracellular matrix and cellular components following inflammation, orchestrating the restoration of tissue homeostasis through precisely coordinated molecular mechanisms.
+                </p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                <div style="background: rgba(255, 255, 255, 0.15); border-radius: 16px; padding: 2rem; text-align: center;">
+                    <h3 style="margin-bottom: 1rem;">🧬 ECM Degradation</h3>
+                    <p>MMPs and cathepsins break down damaged matrix components</p>
+                </div>
+                
+                <div style="background: rgba(255, 255, 255, 0.15); border-radius: 16px; padding: 2rem; text-align: center;">
+                    <h3 style="margin-bottom: 1rem;">🔬 ECM Synthesis</h3>
+                    <p>New collagen and fibronectin deposition for structural integrity</p>
+                </div>
+                
+                <div style="background: rgba(255, 255, 255, 0.15); border-radius: 16px; padding: 2rem; text-align: center;">
+                    <h3 style="margin-bottom: 1rem;">⚡ Cell Dynamics</h3>
+                    <p>Controlled proliferation and apoptosis of myofibroblasts</p>
+                </div>
+                
+                <div style="background: rgba(255, 255, 255, 0.15); border-radius: 16px; padding: 2rem; text-align: center;">
+                    <h3 style="margin-bottom: 1rem;">🩸 Angiogenesis</h3>
+                    <p>VEGF-driven vessel formation for nutrient delivery</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="phases-section">
+            <h2 style="font-size: 2.25rem; margin-bottom: 3rem; text-align: center; color: #000000;">Three-Phase Remodeling Process</h2>
+            
+            <div class="phases-grid">
+                <div class="phase-card phase-1">
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem; color: #000000;">🔥 Inflammatory Phase</h3>
+                    <div style="background: #fafafa; border-radius: 8px; padding: 1rem; margin: 1rem 0; text-align: center; color: #000000; font-weight: 600;">0 - 3 days</div>
+                    
+                    <ul style="margin: 1.5rem 0;">
+                        <li style="margin: 0.5rem 0;">• <strong>Neutrophils:</strong> First responders, debris clearance</li>
+                        <li style="margin: 0.5rem 0;">• <strong>M1 Macrophages:</strong> Pro-inflammatory cytokines</li>
+                        <li style="margin: 0.5rem 0;">• <strong>Cascade:</strong> TNF-α, IL-6, ROS production</li>
+                    </ul>
+                    
+                    <div style="background: #fafafa; border-radius: 8px; padding: 1rem; color: #000000;">
+                        <strong>Objective:</strong> Eliminate pathogens and damaged tissue
+                    </div>
+                </div>
+
+                <div class="phase-card phase-2">
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem; color: #000000;">🔄 Proliferative Phase</h3>
+                    <div style="background: #fafafa; border-radius: 8px; padding: 1rem; margin: 1rem 0; text-align: center; color: #000000; font-weight: 600;">3 - 21 days</div>
+                    
+                    <ul style="margin: 1.5rem 0;">
+                        <li style="margin: 0.5rem 0;">• <strong>Fibroblasts:</strong> ECM synthesis and deposition</li>
+                        <li style="margin: 0.5rem 0;">• <strong>M2 Macrophages:</strong> Anti-inflammatory signaling</li>
+                        <li style="margin: 0.5rem 0;">• <strong>Growth factors:</strong> VEGF, PDGF, TGF-β</li>
+                    </ul>
+                    
+                    <div style="background: #fafafa; border-radius: 8px; padding: 1rem; color: #000000;">
+                        <strong>Objective:</strong> Tissue rebuilding and matrix formation
+                    </div>
+                </div>
+
+                <div class="phase-card phase-3">
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem; color: #000000;">🏗️ Maturation Phase</h3>
+                    <div style="background: #fafafa; border-radius: 8px; padding: 1rem; margin: 1rem 0; text-align: center; color: #000000; font-weight: 600;">Weeks - Years</div>
+                    
+                    <ul style="margin: 1.5rem 0;">
+                        <li style="margin: 0.5rem 0;">• <strong>ECM Crosslinking:</strong> Collagen maturation</li>
+                        <li style="margin: 0.5rem 0;">• <strong>Scar Formation:</strong> Organized tissue structure</li>
+                        <li style="margin: 0.5rem 0;">• <strong>Function restoration:</strong> Biomechanical properties</li>
+                    </ul>
+                    
+                    <div style="background: #fafafa; border-radius: 8px; padding: 1rem; color: #000000;">
+                        <strong>Objective:</strong> Long-term stability and function
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="scavenger-section">
+            <h2 style="font-size: 2.25rem; margin-bottom: 3rem; text-align: center;">Scavenger Cell Orchestration</h2>
+            
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <p style="font-size: 1.125rem; line-height: 1.7;">
+                    <span class="medical-term" style="color: #000000;">Scavenger cells</span> (primarily macrophages) orchestrate the transition from inflammation to repair through precise phenotypic switching.
+                </p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 3rem 0;">
+                <div style="background: rgba(255, 255, 255, 0.15); border-radius: 16px; padding: 2rem;">
+                    <h3 style="margin-bottom: 1.5rem; text-align: center; color: #000000;">M1 Macrophages</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin: 1rem 0;">• Pro-inflammatory (TNF-α, IL-6)</li>
+                        <li style="margin: 1rem 0;">• MMP-9 (ECM degradation)</li>
+                        <li style="margin: 1rem 0;">• Sustain inflammation</li>
+                        <li style="margin: 1rem 0;">• ROS production</li>
+                    </ul>
+                </div>
+                
+                <div style="background: rgba(255, 255, 255, 0.15); border-radius: 16px; padding: 2rem;">
+                    <h3 style="margin-bottom: 1.5rem; text-align: center; color: #000000;">M2 Macrophages</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin: 1rem 0;">• Anti-inflammatory (IL-10, TGF-β)</li>
+                        <li style="margin: 1rem 0;">• TIMP-1 (ECM stabilization)</li>
+                        <li style="margin: 1rem 0;">• Promote fibrosis & angiogenesis</li>
+                        <li style="margin: 1rem 0;">• Tissue repair signaling</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin: 3rem 0;">
+                <h3 style="margin-bottom: 2rem;">Key Mediators Released</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem;">
+                    <div style="background: rgba(255, 255, 255, 0.15); border-radius: 12px; padding: 1.5rem;">
+                        <span class="drug-name" style="color: #000000;">TGF-β</span><br>
+                        Fibroblast differentiation
+                    </div>
+                    <div style="background: rgba(255, 255, 255, 0.15); border-radius: 12px; padding: 1.5rem;">
+                        <span class="drug-name" style="color: #000000;">VEGF</span><br>
+                        Angiogenesis stimulation
+                    </div>
+                    <div style="background: rgba(255, 255, 255, 0.15); border-radius: 12px; padding: 1.5rem;">
+                        <span class="drug-name" style="color: #000000;">PDGF</span><br>
+                        Fibroblast proliferation
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mechanisms-section">
+            <h2 style="font-size: 2.25rem; margin-bottom: 3rem; text-align: center; color: #000000;">Molecular Mechanisms</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div style="background: #fafafa; border-radius: 16px; padding: 2rem; border-left: 2px solid #666666;">
+                    <h3 style="color: #000000; margin-bottom: 1rem;">⚖️ MMP/TIMP Balance</h3>
+                    <div style="background: #fafafa; border-radius: 8px; padding: 1rem; margin: 1rem 0;">
+                        <strong>M1:</strong> ↑ MMP-2/9 <span class="arrow">→</span> ECM breakdown
+                    </div>
+                    <div style="background: #fafafa; border-radius: 8px; padding: 1rem; margin: 1rem 0;">
+                        <strong>M2:</strong> ↑ TIMP-1/2 <span class="arrow">→</span> ECM deposition
+                    </div>
+                </div>
+                
+                <div style="background: #fafafa; border-radius: 16px; padding: 2rem; border-left: 2px solid #666666;">
+                    <h3 style="color: #000000; margin-bottom: 1rem;">🧬 TGF-β/Smad Pathway</h3>
+                    <p style="margin-bottom: 1rem;">Primary driver of collagen synthesis and fibrotic processes</p>
+                    <div style="background: #fafafa; border-radius: 8px; padding: 1rem; color: #000000;">
+                        TGF-β → Smad2/3 → Collagen genes
+                    </div>
+                </div>
+                
+                <div style="background: #fafafa; border-radius: 16px; padding: 2rem; border-left: 2px solid #666666;">
+                    <h3 style="color: #000000; margin-bottom: 1rem;">⚡ ROS Signaling</h3>
+                    <div style="background: #fafafa; border-radius: 8px; padding: 1rem; margin: 1rem 0;">
+                        <strong>Low ROS:</strong> Promote healing
+                    </div>
+                    <div style="background: #fafafa; border-radius: 8px; padding: 1rem; margin: 1rem 0;">
+                        <strong>High ROS:</strong> Chronic inflammation
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="clinical-section">
+            <h2 style="font-size: 2.25rem; margin-bottom: 3rem; text-align: center; color: #000000;">Clinical Implications</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div style="background: #fafafa; border-radius: 16px; padding: 2rem; border-left: 2px solid #666666;">
+                    <h3 style="color: #000000; margin-bottom: 1rem;">Pulmonary Fibrosis</h3>
+                    <p><strong>Defect:</strong> Excessive M2 activity</p>
+                    <p><strong>Outcome:</strong> ECM overdeposition</p>
+                </div>
+                
+                <div style="background: #fafafa; border-radius: 16px; padding: 2rem; border-left: 2px solid #666666;">
+                    <h3 style="color: #000000; margin-bottom: 1rem;">Chronic Wounds</h3>
+                    <p><strong>Defect:</strong> Persistent M1 activity</p>
+                    <p><strong>Outcome:</strong> Non-resolving inflammation</p>
+                </div>
+                
+                <div style="background: #fafafa; border-radius: 16px; padding: 2rem; border-left: 2px solid #666666;">
+                    <h3 style="color: #000000; margin-bottom: 1rem;">Atherosclerosis</h3>
+                    <p><strong>Defect:</strong> Impaired efferocytosis</p>
+                    <p><strong>Outcome:</strong> Necrotic core formation</p>
+                </div>
+                
+                <div style="background: #fafafa; border-radius: 16px; padding: 2rem; border-left: 2px solid #666666;">
+                    <h3 style="color: #000000; margin-bottom: 1rem;">Cardiac Remodeling</h3>
+                    <p><strong>Defect:</strong> Maladaptive fibrosis</p>
+                    <p><strong>Outcome:</strong> Heart failure</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="therapeutic-section">
+            <h2 style="font-size: 2.25rem; margin-bottom: 3rem; text-align: center;">Therapeutic Targets</h2>
+            
+            <div class="therapeutic-grid">
+                <div class="therapy-card">
+                    <h3 style="margin-bottom: 1rem; color: #000000;">M2 Polarization</h3>
+                    <p style="margin-bottom: 1rem;"><span class="drug-name">IL-4/IL-13 therapy</span> promotes anti-inflammatory phenotype</p>
+                    <p><strong>Example:</strong> <span class="drug-name">Dupilumab</span></p>
+                </div>
+                
+                <div class="therapy-card">
+                    <h3 style="margin-bottom: 1rem; color: #000000;">Enhanced Efferocytosis</h3>
+                    <p style="margin-bottom: 1rem;"><span class="drug-name">Annexin A1 mimetics</span> improve clearance</p>
+                    <p><strong>Target:</strong> Phosphatidylserine pathways</p>
+                </div>
+                
+                <div class="therapy-card">
+                    <h3 style="margin-bottom: 1rem; color: #000000;">MMP Modulation</h3>
+                    <p style="margin-bottom: 1rem;"><span class="drug-name">Doxycycline</span> inhibits matrix degradation</p>
+                    <p><strong>Application:</strong> Aneurysm stabilization</p>
+                </div>
+                
+                <div class="therapy-card">
+                    <h3 style="margin-bottom: 1rem; color: #000000;">Anti-fibrotic Agents</h3>
+                    <p style="margin-bottom: 1rem;"><span class="drug-name">Pirfenidone</span> blocks TGF-β</p>
+                    <p><strong>Indication:</strong> Pulmonary fibrosis</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="future-section">
+            <h2 style="font-size: 2.25rem; margin-bottom: 3rem; text-align: center;">Future Innovations</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div style="background: rgba(255, 255, 255, 0.15); border-radius: 16px; padding: 2rem; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">🧬</div>
+                    <h3 style="margin-bottom: 1rem;">Single-Cell RNA Sequencing</h3>
+                    <p>Novel macrophage subsets identification</p>
+                </div>
+                
+                <div style="background: rgba(255, 255, 255, 0.15); border-radius: 16px; padding: 2rem; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">💊</div>
+                    <h3 style="margin-bottom: 1rem;">Nanoparticle Delivery</h3>
+                    <p>Targeted TGF-β siRNA therapy</p>
+                </div>
+                
+                <div style="background: rgba(255, 255, 255, 0.15); border-radius: 16px; padding: 2rem; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">🤖</div>
+                    <h3 style="margin-bottom: 1rem;">AI-Based Modeling</h3>
+                    <p>Predictive remodeling algorithms</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="finale-section">
+            <div class="celebration-box">
+                <div style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem;">🎉 Series Complete! 🎉</div>
+                <div style="font-size: 1.125rem;">18 Lectures • Comprehensive Vascular Surgery Education</div>
+            </div>
+            
+            <h2 style="font-size: 2.25rem; margin-bottom: 3rem;">Essential Clinical Takeaways</h2>
+            
+            <div class="takeaways-grid">
+                <div class="takeaway-card">
+                    <div style="width: 40px; height: 40px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto; font-weight: 700; font-size: 1.25rem;">1</div>
+                    <h3 style="margin-bottom: 1rem;">Orchestrated Process</h3>
+                    <p>Scavenger cells are pivotal in switching from inflammation to repair</p>
+                </div>
+                
+                <div class="takeaway-card">
+                    <div style="width: 40px; height: 40px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto; font-weight: 700; font-size: 1.25rem;">2</div>
+                    <h3 style="margin-bottom: 1rem;">Pathological Outcomes</h3>
+                    <p>Dysregulated signaling leads to fibrosis and chronic wounds</p>
+                </div>
+                
+                <div class="takeaway-card">
+                    <div style="width: 40px; height: 40px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto; font-weight: 700; font-size: 1.25rem;">3</div>
+                    <h3 style="margin-bottom: 1rem;">Therapeutic Promise</h3>
+                    <p>Macrophage polarization therapies show clinical potential</p>
+                </div>
+                
+                <div class="takeaway-card">
+                    <div style="width: 40px; height: 40px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto; font-weight: 700; font-size: 1.25rem;">4</div>
+                    <h3 style="margin-bottom: 1rem;">Future Horizons</h3>
+                    <p>AI and nanotechnology will revolutionize personalized therapy</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 4rem; padding: 3rem; background: rgba(255, 255, 255, 0.1); border-radius: 20px;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">🏆 Journey Complete</h3>
+                <p style="font-size: 1.125rem; line-height: 1.7;">
+                    From anatomical foundations to cutting-edge biomechanics, this comprehensive series represents 
+                    Professor Allam's lifelong dedication to advancing vascular surgery through education and research excellence.
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

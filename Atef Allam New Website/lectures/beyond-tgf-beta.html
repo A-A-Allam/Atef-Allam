@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond TGF-β/MMP - Professor Atef Allam</title>
+    <meta name="description" content="Advanced pathophysiology factors in fibrosis and chronic wound healing">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #000000;
+            background: #fafafa;
+            line-height: 1.6;
+        }
+        
+        .nav-bar {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid #e5e5e5;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-brand {
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: #000000;
+        }
+        
+        .back-link {
+            color: #000000;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        .lecture-header {
+            text-align: center;
+            padding: 2rem 0 4rem 0;
+            margin-bottom: 4rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .lecture-title {
+            font-size: 2.75rem;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 1rem;
+        }
+        
+        .lecture-subtitle {
+            font-size: 1.25rem;
+            color: #000000;
+            margin-bottom: 2rem;
+        }
+        
+        .lecture-meta { color: #000000; }
+        
+        .research-intro {
+            background: #fafafa;
+            color: #000000;
+            border-radius: 20px;
+            padding: 4rem;
+            margin: 4rem 0;
+            text-align: center;
+        }
+        
+        .research-intro h2 {
+            font-size: 2.25rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        
+        .pathway-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin: 5rem 0;
+        }
+        
+        .pathway-card {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .pathway-header {
+            padding: 2.5rem;
+            color: #000000;
+            text-align: center;
+        }
+        
+        .pathway-1 .pathway-header,
+        .pathway-2 .pathway-header,
+        .pathway-3 .pathway-header,
+        .pathway-4 .pathway-header,
+        .pathway-5 .pathway-header {
+            background: #fafafa;
+            color: #000000;
+        }
+        
+        .pathway-header h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pathway-content {
+            background: #fafafa;
+            padding: 2.5rem;
+            border: 1px solid #f0f0f0;
+        }
+        
+        .mechanism-flow {
+            background: #fafafa;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            text-align: center;
+        }
+        
+        .persistence-section {
+            background: #fafafa;
+            border-left: 2px solid #666666;
+            border-radius: 16px;
+            padding: 3rem;
+            margin: 4rem 0;
+        }
+        
+        .persistence-section h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 2rem;
+        }
+        
+        .therapeutic-section {
+            background: #fafafa;
+            border-radius: 20px;
+            padding: 4rem;
+            margin: 5rem 0;
+            border-left: 2px solid #666666;
+        }
+        
+        .therapeutic-table {
+            background: #fafafa;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        
+        .therapeutic-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .therapeutic-table th {
+            background: #fafafa;
+            color: #000000;
+            padding: 1.5rem;
+            text-align: left;
+        }
+        
+        .therapeutic-table td {
+            padding: 1.5rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .takeaways-section {
+            background: #fafafa;
+            color: #000000;
+            border-radius: 20px;
+            padding: 4rem;
+            margin: 5rem 0;
+        }
+        
+        .takeaways-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .takeaway-card {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+        }
+        
+        .medical-term { font-weight: 600; color: #000000; }
+        .drug-name { font-weight: 500; color: #000000; font-style: italic; }
+        .arrow { color: #000000; font-weight: bold; margin: 0 0.5rem; }
+        
+        @media (max-width: 768px) {
+            .lecture-title { font-size: 2.25rem; }
+            .main-content { padding: 2rem 1rem; }
+            .pathway-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="../Atef Allam New Website/index.html" class="nav-brand">Prof. Atef Allam</a>
+            <a href="../Atef Allam New Website/lectures.html" class="back-link">← Back to Lectures</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <header class="lecture-header">
+            <h1 class="lecture-title">Beyond TGF-β/MMP</h1>
+            <p class="lecture-subtitle">Advanced Pathophysiology in Fibrosis & Chronic Wound Healing</p>
+            <div class="lecture-meta">
+                <strong>Professor Atef Allam</strong> • Molecular Research • Advanced Pathophysiology
+            </div>
+        </header>
+
+        <section class="research-intro">
+            <h2>Expanding the Pathophysiological Paradigm</h2>
+            <p style="font-size: 1.125rem; line-height: 1.7;">
+                Fibrosis and chronic non-healing wounds extend far beyond dysregulated TGF-β/MMP signaling. Our research identifies five critical independent factors driving pathological tissue remodeling.
+            </p>
+        </section>
+
+        <div class="pathway-grid">
+            <div class="pathway-card pathway-1">
+                <div class="pathway-header">
+                    <h3>Factor 1: Fibrin Network Persistence</h3>
+                </div>
+                <div class="pathway-content">
+                    <h4 style="margin-bottom: 1rem;">Early Inflammatory Role</h4>
+                    <p>Forms provisional matrix for cell migration and acts as scaffold for fibroblast infiltration.</p>
+                    
+                    <div class="mechanism-flow">
+                        <span class="medical-term">Excessive Fibrin</span> <span class="arrow">→</span> Chronic fibrosis
+                    </div>
+                    
+                    <h4 style="margin: 2rem 0 1rem 0;">Pathological Implications</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0;">• <span class="medical-term">Fibrinolytic deficiency</span> impairs degradation</li>
+                        <li style="padding: 0.5rem 0;">• <span class="medical-term">Factor XIIIa crosslinking</span> increases stiffness</li>
+                        <li style="padding: 0.5rem 0;">• Enhanced fibroblast activation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pathway-card pathway-2">
+                <div class="pathway-header">
+                    <h3>Factor 2: Microbial Load & Biofilms</h3>
+                </div>
+                <div class="pathway-content">
+                    <h4 style="margin-bottom: 1rem;">Bacterial Persistence</h4>
+                    <p><span class="medical-term">Biofilms</span> (S. aureus, P. aeruginosa) resist phagocytosis, sustaining M1 polarization.</p>
+                    
+                    <div class="mechanism-flow">
+                        <span class="medical-term">Biofilm</span> <span class="arrow">→</span> <span class="medical-term">Chronic Inflammation</span> <span class="arrow">→</span> Pro-fibrotic cytokines
+                    </div>
+                    
+                    <h4 style="margin: 2rem 0 1rem 0;">Additional Pathogens</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0;">• <span class="medical-term">Hepatitis C</span> → liver fibrosis via oxidative stress</li>
+                        <li style="padding: 0.5rem 0;">• <span class="medical-term">Chronic Candida</span> → non-healing ulcers</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pathway-card pathway-3">
+                <div class="pathway-header">
+                    <h3>Factor 3: Defective Clearance</h3>
+                </div>
+                <div class="pathway-content">
+                    <h4 style="margin-bottom: 1rem;">Impaired Efferocytosis</h4>
+                    <p><span class="medical-term">Macrophage dysfunction</span> (diabetes) fails to clear apoptotic cells.</p>
+                    
+                    <div class="mechanism-flow">
+                        <span class="medical-term">Defective Clearance</span> <span class="arrow">→</span> <span class="medical-term">HMGB1, ATP</span> <span class="arrow">→</span> Inflammation
+                    </div>
+                    
+                    <div style="background: #fafafa; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+                        <h4>"Fibrin Traps" Phenomenon</h4>
+                        <p>Fibrin entraps inflammatory cells forming pro-inflammatory nidus, evolving into hyalinized scar tissue.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pathway-card pathway-4">
+                <div class="pathway-header">
+                    <h3>Factor 4: Hypoxia & Oxidative Stress</h3>
+                </div>
+                <div class="pathway-content">
+                    <h4 style="margin-bottom: 1rem;">Ischemia-Reperfusion Injury</h4>
+                    <p><span class="medical-term">ROS generation</span> promotes ECM crosslinking and matrix stiffening.</p>
+                    
+                    <div class="mechanism-flow">
+                        <span class="medical-term">ROS</span> <span class="arrow">→</span> <span class="medical-term">ECM Crosslinking</span> <span class="arrow">→</span> Myofibroblast activation
+                    </div>
+                    
+                    <h4 style="margin: 2rem 0 1rem 0;">HIF-1α Stabilization</h4>
+                    <p>Drives <span class="drug-name">VEGF</span> expression but paradoxically promotes fibrosis in chronic hypoxia.</p>
+                </div>
+            </div>
+
+            <div class="pathway-card pathway-5">
+                <div class="pathway-header">
+                    <h3>Factor 5: Biomechanical Factors</h3>
+                </div>
+                <div class="pathway-content">
+                    <h4 style="margin-bottom: 1rem;">Tissue Stiffness Sensing</h4>
+                    <p>Fibroblasts sense matrix rigidity via <span class="drug-name">integrin-ROCK pathway</span>.</p>
+                    
+                    <div class="mechanism-flow">
+                        <span class="medical-term">Matrix Stiffness</span> <span class="arrow">→</span> <span class="medical-term">α-SMA</span> <span class="arrow">→</span> Enhanced fibrosis
+                    </div>
+                    
+                    <h4 style="margin: 2rem 0 1rem 0;">Vascular Shear Stress</h4>
+                    <p>Altered flow patterns cause endothelial dysfunction, promoting <span class="drug-name">TGF-β</span> release.</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="persistence-section">
+            <h2>Why Does Fibrin Network Persist?</h2>
+            
+            <div style="background: #fff; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
+                <h3 style="margin-bottom: 1rem;">Defective Fibrinolysis</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 0.5rem 0;">• Decreased plasminogen activation</li>
+                    <li style="padding: 0.5rem 0;">• <span class="drug-name">PAI-1</span> overexpression in diabetes/obesity</li>
+                    <li style="padding: 0.5rem 0;">• α2-antiplasmin inhibition</li>
+                </ul>
+            </div>
+            
+            <div style="background: #fff; border-radius: 12px; padding: 2rem;">
+                <h3 style="margin-bottom: 1rem;">Macrophage Clearance Failure</h3>
+                <p>Unlike cellular debris, fibrin requires plasmin-mediated dissolution. When plasmin activity is inhibited, fibrin becomes a persistent inflammatory scaffold.</p>
+            </div>
+        </section>
+
+        <section class="therapeutic-section">
+            <h2 style="font-size: 2.25rem; text-align: center; margin-bottom: 3rem;">Therapeutic Targets</h2>
+            
+            <div class="therapeutic-table">
+                <table>
+                    <tr><th>Target</th><th>Approach</th><th>Example</th></tr>
+                    <tr><td><strong>Fibrinolysis</strong></td><td>Recombinant tPA</td><td>Alteplase for chronic wounds</td></tr>
+                    <tr><td><strong>Biofilm</strong></td><td>Antibiotic hydrogels</td><td>Vancomycin-eluting dressings</td></tr>
+                    <tr><td><strong>Efferocytosis</strong></td><td>Annexin A1 mimetics</td><td>Resolvin E1 trials</td></tr>
+                    <tr><td><strong>Oxidative Stress</strong></td><td>Nrf2 activators</td><td>Bardoxolone methyl</td></tr>
+                </table>
+            </div>
+        </section>
+
+        <section class="takeaways-section">
+            <h2 style="font-size: 2.25rem; text-align: center; margin-bottom: 3rem;">Key Research Insights</h2>
+            
+            <div class="takeaways-grid">
+                <div class="takeaway-card">
+                    <h3 style="margin-bottom: 1rem;">🔬 Independent Pathways</h3>
+                    <p>Fibrin density, infection, hypoxia, and macrophage dysfunction operate beyond TGF-β/MMP mechanisms.</p>
+                </div>
+                
+                <div class="takeaway-card">
+                    <h3 style="margin-bottom: 1rem;">🧬 Inflammatory Scaffold</h3>
+                    <p>Uncleared fibrin acts as pro-inflammatory scaffold perpetuating fibrotic responses.</p>
+                </div>
+                
+                <div class="takeaway-card">
+                    <h3 style="margin-bottom: 1rem;">⚡ Mechanical Integration</h3>
+                    <p>Biofilms and mechanical stress create positive feedback loops maintaining non-healing states.</p>
+                </div>
+                
+                <div class="takeaway-card">
+                    <h3 style="margin-bottom: 1rem;">💊 Multimodal Therapy</h3>
+                    <p>Effective treatments require combined fibrinolysis, infection control, and macrophage reprogramming.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

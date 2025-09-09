@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lectures & Teaching - Professor Atef Allam</title>
+    <meta name="description" content="Professor Atef Allam's lectures, courses, keynotes, workshops, and educational contributions.">
+    <meta name="keywords" content="Academic Lectures, Teaching, Courses, Professor Atef Allam, Keynotes, Workshops, Education">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Lectures & Teaching - Professor Atef Allam">
+    <meta property="og:description" content="Professor Atef Allam's lectures, courses, keynotes, workshops, and educational contributions.">
+    <meta property="og:url" content="https://atefallamsite.github.io/lectures.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@300;400;500&display=swap"></noscript>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Additional styles for lectures -->
+    <style>
+        .lecture-filters {
+            position: sticky;
+            top: 64px;
+            background: #ffffff;
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            z-index: 10;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 0.75rem 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            margin-top: 0;
+        }
+        
+        .filter-button {
+            padding: 0.4rem 0.75rem;
+            border: 1px solid #e5e5e5;
+            background: #ffffff;
+            color: #666666;
+            border-radius: 1.5rem;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 400;
+        }
+        
+        .filter-button.active,
+        .filter-button:hover {
+            border-color: #000000;
+            color: #000000;
+            background: #f5f5f5;
+        }
+        
+        .lecture-item {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        
+        .lecture-item.hidden {
+            display: none;
+        }
+        
+        .search-box {
+            position: relative;
+            width: 100%;
+            max-width: 250px;
+            flex-shrink: 0;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 0.4rem 2rem 0.4rem 0.75rem;
+            border: 1px solid #e5e5e5;
+            border-radius: 1.5rem;
+            background: #ffffff;
+            color: #000000;
+            font-size: 0.8rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 400;
+        }
+        
+        .search-input:focus {
+            outline: 2px solid #000000;
+            border-color: #000000;
+        }
+        
+        .search-icon {
+            position: absolute;
+            right: 0.6rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999999;
+        }
+        
+        /* Compact Lecture Stats */
+        .lecture-stats-note {
+            font-size: 0.875rem;
+            color: #666666;
+            text-align: center;
+            margin-top: 1.5rem;
+            padding: 0.75rem 1rem;
+            background: #f9f9f9;
+            border-radius: 0.5rem;
+            border: 1px solid #e5e5e5;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 400;
+        }
+        
+        .stats-item {
+            font-weight: 500;
+            color: #000000;
+        }
+        
+        .compact-hero {
+            min-height: 40vh;
+            padding: 3rem 0;
+        }
+        
+        .lecture-visual-card {
+            background: #ffffff;
+            border: 1px solid #f0f0f0;
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        
+        .lecture-visual-card:hover {
+            border-color: #e0e0e0;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+        
+        .lecture-category-tag {
+            display: inline-block;
+            background: #f5f5f5;
+            color: #666666;
+            font-size: 0.75rem;
+            font-weight: 400;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        
+        .lecture-quick-actions {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        
+        .lecture-action-btn {
+            padding: 0;
+            border: none;
+            background: none;
+            color: #000000;
+            font-size: 0.875rem;
+            font-weight: 400;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: left;
+            text-decoration: none;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .lecture-action-btn:hover {
+            color: #666666;
+        }
+        
+        .lecture-action-btn.primary {
+            color: #000000;
+            font-weight: 500;
+        }
+        
+        .lecture-action-btn.primary:hover {
+            color: #333333;
+        }
+        
+        .lecture-action-btn::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #000000;
+            transform: scaleX(0);
+            transition: transform 0.2s ease;
+        }
+        
+        .lecture-action-btn:hover::after {
+            transform: scaleX(1);
+        }
+        
+        /* Responsive filter layout */
+        @media (max-width: 1024px) {
+            .lecture-filters .flex-row {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 1rem;
+            }
+            
+            .search-box {
+                max-width: 100%;
+            }
+            
+            .filter-button {
+                font-size: 0.75rem;
+                padding: 0.35rem 0.6rem;
+                margin: 0.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .lecture-filters .gap-3 {
+                gap: 0.75rem;
+            }
+            
+            .filter-button {
+                font-size: 0.7rem;
+                padding: 0.3rem 0.5rem;
+                margin: 0.15rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-content">
+            <div class="nav-brand">
+                <a href="index.html" class="link">
+                    <strong>Professor Atef Allam</strong>
+                </a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">About</a></li>
+                <li><a href="expertise.html">Expertise</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="lectures.html" class="active">Lectures</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="reflections.html">Reflections</a></li>
+                <li><a href="career.html">Career</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- Mobile menu toggle -->
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <button class="mobile-nav-close" aria-label="Close navigation menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">About</a></li>
+            <li><a href="expertise.html">Expertise</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="lectures.html">Lectures</a></li>
+            <li><a href="books.html">Books</a></li>
+            <li><a href="reflections.html">Reflections</a></li>
+            <li><a href="career.html">Career</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Header Section -->
+        <section class="section hero compact-hero">
+            <div class="space-y-8">
+                <div class="space-y-3">
+                    <div class="font-mono text-muted-foreground">EDUCATIONAL CONTENT</div>
+                    <h1>Lectures &<br /><span class="text-muted-foreground">Teaching</span></h1>
+                </div>
+                <p class="hero-subtitle">
+                    Complete digital library of Professor Atef Allam's educational content spanning 44+ years of teaching excellence. Access workshops, keynotes, training programs, and specialized lectures in vascular surgery and medical education.
+                </p>
+                
+                <!-- Compact Lecture Stats -->
+                <div class="lecture-stats-note">
+                    <span class="stats-item">4 Major Categories</span> • 
+                    <span class="stats-item">18 Complete Topics</span> • 
+                    <span class="stats-item">44+ Years Teaching</span> • 
+                    <span class="stats-item">50+ Thesis Supervised</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compact Filters and Search -->
+        <section class="lecture-filters">
+            <div class="container">
+                <div class="flex flex-row justify-between items-center gap-4">
+                    <div class="flex flex-wrap gap-3">
+                        <button class="filter-button active" data-filter="all">All (18)</button>
+                        <button class="filter-button" data-filter="aortic">Aortic Disease (5)</button>
+                        <button class="filter-button" data-filter="interventional">Interventional (3)</button>
+                        <button class="filter-button" data-filter="biomechanics">Biomechanics (5)</button>
+                        <button class="filter-button" data-filter="pathophysiology">Research (5)</button>
+                    </div>
+                    
+                    <div class="search-box">
+                        <input type="text" class="search-input" placeholder="Search..." aria-label="Search lectures">
+                        <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lectures Library -->
+        <section id="lectures-library" class="py-8">
+            <div class="space-y-8">
+                
+                <!-- All Authentic Lectures -->
+                <div class="space-y-4">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        
+                        <!-- AORTIC DISEASE & MANAGEMENT (5) -->
+                        
+                        <!-- Normal Aortic Anatomy -->
+                        <div class="lecture-item lecture-visual-card" data-type="aortic" data-category="anatomy">
+                            <div class="space-y-4">
+                                <div class="space-y-2">
+                                    <h3 class="text-xl font-semibold">Normal Aortic Anatomy & Indexing</h3>
+                                    <div class="text-sm text-muted-foreground">
+                                        <strong>Prof. Atef Allam</strong> • Clinical Guidelines • Risk Stratification
+                                    </div>
+                                </div>
+                                
+                                <p class="text-muted-foreground text-sm leading-relaxed">
+                                    Comprehensive analysis of aortic diameter assessment, indexing to BSA/height, and 2022 ACC/AHA guidelines for risk stratification in surgical planning.
+                                </p>
+                                
+                                <div class="space-y-2">
+                                    <div class="lecture-category-tag">Aortic Disease</div>
+                                    <div class="lecture-category-tag">Guidelines</div>
+                                    <div class="lecture-category-tag">Risk Assessment</div>
+                                </div>
+                                
+                                <div class="lecture-quick-actions">
+                                    <a href="lectures/aortic-anatomy.html" class="lecture-action-btn primary">Access Lecture</a>
+                                    <button class="lecture-action-btn" onclick="shareContent('aortic-anatomy')">Share</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Aortic Biopsy -->
+                        <div class="lecture-item lecture-visual-card" data-type="aortic" data-category="biopsy">
+                            <div class="space-y-4">
+                                <div class="space-y-2">
+                                    <h3 class="text-xl font-semibold">Aortic Biopsy Techniques</h3>
+                                    <div class="text-sm text-muted-foreground">
+                                        <strong>Prof. Atef Allam</strong> • Advanced Methodologies • Tissue Sampling
+                                    </div>
+                                </div>
+                                
+                                <p class="text-muted-foreground text-sm leading-relaxed">
+                                    Advanced methodologies for aortic tissue sampling and diagnostic applications with clinical protocols and safety considerations.
+                                </p>
+                                
+                                <div class="space-y-2">
+                                    <div class="lecture-category-tag">Aortic Disease</div>
+                                    <div class="lecture-category-tag">Biopsy Techniques</div>
+                                    <div class="lecture-category-tag">Diagnostics</div>
+                                </div>
+                                
+                                <div class="lecture-quick-actions">
+                                    <a href="lectures/aortic-biopsy.html" class="lecture-action-btn primary">Access Lecture</a>
+                                    <button class="lecture-action-btn" onclick="shareContent('aortic-biopsy')">Share</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Normal Aortic Diameters -->
+                        <div class="lecture-item lecture-visual-card" data-type="aortic" data-category="diameters">
+                            <div class="space-y-4">
+                                <div class="space-y-2">
+                                    <h3 class="text-xl font-semibold">Normal Aortic Diameters by Segment</h3>
+                                    <div class="text-sm text-muted-foreground">
+                                        <strong>Prof. Atef Allam</strong> • Anatomical Reference • Clinical Assessment
+                                    </div>
+                                </div>
+                                
+                                <p class="text-muted-foreground text-sm leading-relaxed">
+                                    Comprehensive measurements and normal values across anatomical segments for clinical assessment and surgical planning reference.
+                                </p>
+                                
+                                <div class="space-y-2">
+                                    <div class="lecture-category-tag">Aortic Disease</div>
+                                    <div class="lecture-category-tag">Normal Values</div>
+                                    <div class="lecture-category-tag">Clinical Reference</div>
+                                </div>
+                                
+                                <div class="lecture-quick-actions">
+                                    <a href="lectures/aortic-diameters.html" class="lecture-action-btn primary">Access Lecture</a>
+                                    <button class="lecture-action-btn" onclick="shareContent('aortic-diameters')">Share</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Aortic Disease Management -->
+                        <div class="lecture-item lecture-visual-card" data-type="aortic" data-category="management">
+                            <div class="space-y-4">
+                                <div class="space-y-2">
+                                    <h3 class="text-xl font-semibold">Aortic Disease Management Update</h3>
+                                    <div class="text-sm text-muted-foreground">
+                                        <strong>Prof. Atef Allam</strong> • Latest Developments • Evidence-Based
+                                    </div>
+                                </div>
+                                
+                                <p class="text-muted-foreground text-sm leading-relaxed">
+                                    Latest developments in aortic disease treatment protocols with evidence-based approaches and contemporary management strategies.
+                                </p>
+                                
+                                <div class="space-y-2">
+                                    <div class="lecture-category-tag">Aortic Disease</div>
+                                    <div class="lecture-category-tag">Management</div>
+                                    <div class="lecture-category-tag">Evidence-Based</div>
+                                </div>
+                                
+                                <div class="lecture-quick-actions">
+                                    <a href="lectures/aortic-management.html" class="lecture-action-btn primary">Access Lecture</a>
+                                    <button class="lecture-action-btn" onclick="shareContent('aortic-management')">Share</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PETTICOAT Technique -->
+                        <div class="lecture-item lecture-visual-card" data-type="aortic" data-category="technique">
+                            <div class="space-y-4">
+                                <div class="space-y-2">
+                                    <h3 class="text-xl font-semibold">PETTICOAT Technique</h3>
+                                    <div class="text-sm text-muted-foreground">
+                                        <strong>Prof. Atef Allam</strong> • Advanced Endovascular • Type B Dissection
+                                    </div>
+                                </div>
+                                
+                                <p class="text-muted-foreground text-sm leading-relaxed">
+                                    Revolutionary endovascular technique combining TEVAR with bare-metal stent extension for optimal aortic remodeling in Type B dissections.
+                                </p>
+                                
+                                <div class="space-y-2">
+                                    <div class="lecture-category-tag">Aortic Disease</div>
+                                    <div class="lecture-category-tag">TEVAR</div>
+                                    <div class="lecture-category-tag">Innovation</div>
+                                </div>
+                                
+                                <div class="lecture-quick-actions">
+                                    <a href="lectures/petticoat-technique.html" class="lecture-action-btn primary">Access Lecture</a>
+                                    <button class="lecture-action-btn" onclick="shareContent('petticoat-technique')">Share</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- INTERVENTIONAL TECHNIQUES (3) -->
+                        
+                        <!-- Balloon Dilation of Atheroma -->
+                        <div class="lecture-item lecture-visual-card" data-type="interventional" data-category="balloon">
+                            <div class="space-y-4">
+                                <div class="space-y-2">
+                                    <h3 class="text-xl font-semibold">Balloon Dilation of Atheroma</h3>
+                                    <div class="text-sm text-muted-foreground">
+                                        <strong>Prof. Atef Allam</strong> • Specialized Techniques • Clinical Outcomes
+                                    </div>
+                                </div>
+                                
+                                <p class="text-muted-foreground text-sm leading-relaxed">
+                                    Specialized techniques for atheroma treatment with focus on optimal outcomes, patient selection, and procedural considerations.
+                                </p>
+                                
+                                <div class="space-y-2">
+                                    <div class="lecture-category-tag">Interventional</div>
+                                    <div class="lecture-category-tag">Balloon Techniques</div>
+                                    <div class="lecture-category-tag">Atheroma Treatment</div>
+                                </div>
+                                
+                                <div class="lecture-quick-actions">
+                                    <a href="lectures/balloon-atheroma.html" class="lecture-action-btn primary">Access Lecture</a>
+                                    <button class="lecture-action-btn" onclick="shareContent('balloon-atheroma')">Share</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Balloon Dilation Strategies -->
+                        <div class="lecture-item lecture-visual-card" data-type="interventional" data-category="strategies">
+                            <div class="space-y-4">
+                                <div class="space-y-2">
+                                    <h3 class="text-xl font-semibold">Balloon Dilation Strategies</h3>
+                                    <div class="text-sm text-muted-foreground">
+                                        <strong>Prof. Atef Allam</strong> • Strategic Approaches • Technique Optimization
+                                    </div>
+                                </div>
+                                
+                                <p class="text-muted-foreground text-sm leading-relaxed">
+                                    Strategic approaches and technique optimization methods for balloon dilation procedures with emphasis on clinical decision-making.
+                                </p>
+                                
+                                <div class="space-y-2">
+                                    <div class="lecture-category-tag">Interventional</div>
+                                    <div class="lecture-category-tag">Strategic Planning</div>
+                                    <div class="lecture-category-tag">Optimization</div>
+                                </div>
+                                
+                                <div class="lecture-quick-actions">
+                                    <a href="lectures/balloon-strategies.html" class="lecture-action-btn primary">Access Lecture</a>
+                                    <button class="lecture-action-btn" onclick="shareContent('balloon-strategies')">Share</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Finite Element Analysis -->
+                        <div class="lecture-item lecture-visual-card" data-type="interventional" data-category="analysis">
+                            <div class="space-y-4">
+                                <div class="space-y-2">
+                                    <h3 class="text-xl font-semibold">FEA Case Examples</h3>
+                                    <div class="text-sm text-muted-foreground">
+                                        <strong>Prof. Atef Allam</strong> • Finite Element Analysis • Real-World Cases
+                                    </div>
+                                </div>
+                                
+                                <p class="text-muted-foreground text-sm leading-relaxed">
+                                    Applications of finite element analysis in vascular surgery with real-world case studies and practical implementation strategies.
+                                </p>
+                                
+                                <div class="space-y-2">
+                                    <div class="lecture-category-tag">Interventional</div>
+                                    <div class="lecture-category-tag">FEA</div>
+                                    <div class="lecture-category-tag">Case Studies</div>
+                                </div>
+                                
+                                <div class="lecture-quick-actions">
+                                    <a href="lectures/finite-element-analysis.html" class="lecture-action-btn primary">Access Lecture</a>
+                                    <button class="lecture-action-btn" onclick="shareContent('finite-element')">Share</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- VASCULAR BIOMECHANICS & PHYSICS (5) -->
+                        
+                        <!-- Biomechanical Rationale -->
+                        <div class="lecture-item lecture-visual-card" data-type="biomechanics" data-category="rationale">
+                            <div class="space-y-4">
+                                <div class="space-y-2">
+                                    <h3 class="text-xl font-semibold">Biomechanical Rationale</h3>
+                                    <div class="text-sm text-muted-foreground">
+                                        <strong>Prof. Atef Allam</strong> • Laplace's Law • Wall Tension Analysis
+                                    </div>
+                                </div>
+                                
+                                <p class="text-muted-foreground text-sm leading-relaxed">
+                                    In-depth exploration of biomechanical principles in vascular surgery with focus on Laplace's Law and wall tension analysis.
+                                </p>
+                                
+                                <div class="space-y-2">
+                                    <div class="lecture-category-tag">Biomechanics</div>
+                                    <div class="lecture-category-tag">Laplace's Law</div>
+                                    <div class="lecture-category-tag">Wall Tension</div>
+                                </div>
+                                
+                                <div class="lecture-quick-actions">
+                                    <a href="lectures/biomechanical-rationale.html" class="lecture-action-btn primary">Access Lecture</a>
+                                    <button class="lecture-action-btn" onclick="shareContent('biomechanical-rationale')">Share</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Biomechanics in Tissue Remodeling -->
+                        <div class="lecture-item lecture-visual-card" data-type="biomechanics" data-category="remodeling">
+                            <div class="space-y-4">
+                                <div class="space-y-2">
+                                    <h3 class="text-xl font-semibold">Biomechanics in Tissue Remodeling</h3>
+                                    <div class="text-sm text-muted-foreground">
+                                        <strong>Prof. Atef Allam</strong> • Mechanical Forces • Biological Responses
+                                    </div>
+                                </div>
+                                
+                                <p class="text-muted-foreground text-sm leading-relaxed">
+                                    Integration of mechanical forces and biological responses in tissue remodeling processes with clinical applications.
+                                </p>
+                                
+                                <div class="space-y-2">
+                                    <div class="lecture-category-tag">Biomechanics</div>
+                                    <div class="lecture-category-tag">Tissue Remodeling</div>
+                                    <div class="lecture-category-tag">Mechanical Forces</div>
+                                </div>
+                                
+                                <div class="lecture-quick-actions">
+                                    <a href="lectures/biomechanics-remodeling.html" class="lecture-action-btn primary">Access Lecture</a>
+                                    <button class="lecture-action-btn" onclick="shareContent('biomechanics-remodeling')">Share</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Vascular Biomechanics & Stress -->
+                        <div class="lecture-item lecture-visual-card" data-type="biomechanics" data-category="stress">
+                            <div class="space-y-4">
+                                <div class="space-y-2">
+                                    <h3 class="text-xl font-semibold">Vascular Biomechanics & Stress</h3>
+                                    <div class="text-sm text-muted-foreground">
+                                        <strong>Prof. Atef Allam</strong> • Stress Patterns • Mechanical Properties
+                                    </div>
+                                </div>
+                                
+                                <p class="text-muted-foreground text-sm leading-relaxed">
+                                    Comprehensive analysis of vascular stress patterns and mechanical properties with clinical implications for surgical planning.
+                                </p>
+                                
+                                <div class="space-y-2">
+                                    <div class="lecture-category-tag">Biomechanics</div>
+                                    <div class="lecture-category-tag">Stress Analysis</div>
+                                    <div class="lecture-category-tag">Mechanical Properties</div>
+                                </div>
+                                
+                                <div class="lecture-quick-actions">
+                                    <a href="lectures/vascular-biomechanics.html" class="lecture-action-btn primary">Access Lecture</a>
+                                    <button class="lecture-action-btn" onclick="shareContent('vascular-biomechanics')">Share</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Wall Tension & Surgical Planning -->
+                        <div class="lecture-item lecture-visual-card" data-type="biomechanics" data-category="planning">
+                            <div class="space-y-4">
+                                <div class="space-y-2">
+                                    <h3 class="text-xl font-semibold">Wall Tension & Surgical Planning</h3>
+                                    <div class="text-sm text-muted-foreground">
+                                        <strong>Prof. Atef Allam</strong> • Critical Analysis • Clinical Applications
+                                    </div>
+                                </div>
+                                
+                                <p class="text-muted-foreground text-sm leading-relaxed">
+                                    Critical analysis of wall tension in surgical decision-making with practical applications in vascular surgery planning.
+                                </p>
+                                
+                                <div class="space-y-2">
+                                    <div class="lecture-category-tag">Biomechanics</div>
+                                    <div class="lecture-category-tag">Wall Tension</div>
+                                    <div class="lecture-category-tag">Surgical Planning</div>
+                                </div>
+                                
+                                <div class="lecture-quick-actions">
+                                    <a href="lectures/wall-tension.html" class="lecture-action-btn primary">Access Lecture</a>
+                                    <button class="lecture-action-btn" onclick="shareContent('wall-tension')">Share</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hypertension, Shear Stress & Dissection -->
+                        <div class="lecture-item lecture-visual-card" data-type="biomechanics" data-category="dissection">
+                            <div class="space-y-4">
+                                <div class="space-y-2">
+                                    <h3 class="text-xl font-semibold">Hypertension, Shear Stress & Dissection</h3>
+                                    <div class="text-sm text-muted-foreground">
+                                        <strong>Prof. Atef Allam</strong> • Complex Relationships • Mechanisms
+                                    </div>
+                                </div>
+                                
+                                <p class="text-muted-foreground text-sm leading-relaxed">
+                                    Complex relationships in aortic dissection mechanisms with focus on hypertension and shear stress interactions.
+                                </p>
+                                
+                                <div class="space-y-2">
+                                    <div class="lecture-category-tag">Biomechanics</div>
+                                    <div class="lecture-category-tag">Shear Stress</div>
+                                    <div class="lecture-category-tag">Dissection</div>
+                                </div>
+                                
+                                <div class="lecture-quick-actions">
+                                    <a href="lectures/hypertension-shear.html" class="lecture-action-btn primary">Access Lecture</a>
+                                    <button class="lecture-action-btn" onclick="shareContent('hypertension-shear')">Share</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PATHOPHYSIOLOGY & RESEARCH (5) -->
+                        
+                        <!-- Beyond TGF-β/MMP -->
+                        <div class="lecture-item lecture-visual-card" data-type="pathophysiology" data-category="molecular">
+                            <div class="space-y-4">
+                                <div class="space-y-2">
+                                    <h3 class="text-xl font-semibold">Beyond TGF-β/MMP</h3>
+                                    <div class="text-sm text-muted-foreground">
+                                        <strong>Prof. Atef Allam</strong> • Advanced Mechanisms • Novel Targets
+                                    </div>
+                                </div>
+                                
+                                <p class="text-muted-foreground text-sm leading-relaxed">
+                                    Advanced molecular mechanisms and novel therapeutic targets beyond traditional TGF-β/MMP pathways in vascular disease.
+                                </p>
+                                
+                                <div class="space-y-2">
+                                    <div class="lecture-category-tag">Research</div>
+                                    <div class="lecture-category-tag">Molecular Mechanisms</div>
+                                    <div class="lecture-category-tag">Therapeutic Targets</div>
+                                </div>
+                                
+                                <div class="lecture-quick-actions">
+                                    <a href="lectures/beyond-tgf-beta.html" class="lecture-action-btn primary">Access Lecture</a>
+                                    <button class="lecture-action-btn" onclick="shareContent('beyond-tgf-beta')">Share</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FCDA Complete Clinical Guide -->
+                        <div class="lecture-item lecture-visual-card" data-type="pathophysiology" data-category="fcda">
+                            <div class="space-y-4">
+                                <div class="space-y-2">
+                                    <h3 class="text-xl font-semibold">FCDA Complete Clinical Guide</h3>
+                                    <div class="text-sm text-muted-foreground">
+                                        <strong>Prof. Atef Allam</strong> • Fibromuscular Dysplasia • Comprehensive Review
+                                    </div>
+                                </div>
+                                
+                                <p class="text-muted-foreground text-sm leading-relaxed">
+                                    Comprehensive overview of Fibromuscular Dysplasia of Arteries with clinical management protocols and diagnostic approaches.
+                                </p>
+                                
+                                <div class="space-y-2">
+                                    <div class="lecture-category-tag">Research</div>
+                                    <div class="lecture-category-tag">FCDA</div>
+                                    <div class="lecture-category-tag">Clinical Guide</div>
+                                </div>
+                                
+                                <div class="lecture-quick-actions">
+                                    <a href="lectures/fcda-complete.html" class="lecture-action-btn primary">Access Lecture</a>
+                                    <button class="lecture-action-btn" onclick="shareContent('fcda-complete')">Share</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FCDA Popliteal Biopsy -->
+                        <div class="lecture-item lecture-visual-card" data-type="pathophysiology" data-category="biopsy">
+                            <div class="space-y-4">
+                                <div class="space-y-2">
+                                    <h3 class="text-xl font-semibold">FCDA Popliteal Biopsy</h3>
+                                    <div class="text-sm text-muted-foreground">
+                                        <strong>Prof. Atef Allam</strong> • Specialized Techniques • Popliteal Assessment
+                                    </div>
+                                </div>
+                                
+                                <p class="text-muted-foreground text-sm leading-relaxed">
+                                    Specialized biopsy techniques for popliteal artery assessment in fibromuscular dysplasia cases with diagnostic protocols.
+                                </p>
+                                
+                                <div class="space-y-2">
+                                    <div class="lecture-category-tag">Research</div>
+                                    <div class="lecture-category-tag">Biopsy Techniques</div>
+                                    <div class="lecture-category-tag">Popliteal Artery</div>
+                                </div>
+                                
+                                <div class="lecture-quick-actions">
+                                    <a href="lectures/fcda-popliteal.html" class="lecture-action-btn primary">Access Lecture</a>
+                                    <button class="lecture-action-btn" onclick="shareContent('fcda-popliteal')">Share</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Neointimal Hyperplasia Complete Guide -->
+                        <div class="lecture-item lecture-visual-card" data-type="pathophysiology" data-category="hyperplasia">
+                            <div class="space-y-4">
+                                <div class="space-y-2">
+                                    <h3 class="text-xl font-semibold">Neointimal Hyperplasia Complete Guide</h3>
+                                    <div class="text-sm text-muted-foreground">
+                                        <strong>Prof. Atef Allam</strong> • Pathophysiology • Prevention Strategies
+                                    </div>
+                                </div>
+                                
+                                <p class="text-muted-foreground text-sm leading-relaxed">
+                                    Comprehensive analysis of neointimal hyperplasia mechanisms and prevention strategies with focus on clinical applications.
+                                </p>
+                                
+                                <div class="space-y-2">
+                                    <div class="lecture-category-tag">Research</div>
+                                    <div class="lecture-category-tag">Pathophysiology</div>
+                                    <div class="lecture-category-tag">Prevention</div>
+                                </div>
+                                
+                                <div class="lecture-quick-actions">
+                                    <a href="lectures/neointimal-hyperplasia-complete.html" class="lecture-action-btn primary">Access Lecture</a>
+                                    <button class="lecture-action-btn" onclick="shareContent('neointimal-hyperplasia')">Share</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tissue Remodeling -->
+                        <div class="lecture-item lecture-visual-card" data-type="pathophysiology" data-category="remodeling">
+                            <div class="space-y-4">
+                                <div class="space-y-2">
+                                    <h3 class="text-xl font-semibold">Tissue Remodeling</h3>
+                                    <div class="text-sm text-muted-foreground">
+                                        <strong>Prof. Atef Allam</strong> • ECM Reorganization • Cellular Mechanisms
+                                    </div>
+                                </div>
+                                
+                                <p class="text-muted-foreground text-sm leading-relaxed">
+                                    Dynamic reorganization of extracellular matrix and cellular components following inflammation with therapeutic implications.
+                                </p>
+                                
+                                <div class="space-y-2">
+                                    <div class="lecture-category-tag">Research</div>
+                                    <div class="lecture-category-tag">Tissue Repair</div>
+                                    <div class="lecture-category-tag">ECM</div>
+                                </div>
+                                
+                                <div class="lecture-quick-actions">
+                                    <a href="lectures/tissue-remodeling.html" class="lecture-action-btn primary">Access Lecture</a>
+                                    <button class="lecture-action-btn" onclick="shareContent('tissue-remodeling')">Share</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="flex flex-col gap-8">
+                <div class="space-y-2">
+                    <div class="text-sm text-muted-foreground">
+                        © 2025 Professor Atef Allam. All rights reserved.
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <button class="theme-toggle" aria-label="Toggle dark mode">
+                        <!-- Icon will be inserted by JavaScript -->
+                    </button>
+                    
+                    <a href="contact.html" class="btn">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer Gradient -->
+    <div class="footer-gradient"></div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Lectures functionality -->
+    <script>
+        // Enhanced Lectures Library Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-button');
+            const lectures = document.querySelectorAll('.lecture-item');
+            const searchInput = document.querySelector('.search-input');
+
+            // Filter functionality
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Filter lectures
+                    lectures.forEach(lecture => {
+                        if (filter === 'all' || lecture.getAttribute('data-type') === filter) {
+                            lecture.style.display = 'block';
+                        } else {
+                            lecture.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Search functionality
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    const searchTerm = this.value.toLowerCase();
+                    
+                    lectures.forEach(lecture => {
+                        const title = lecture.querySelector('h3').textContent.toLowerCase();
+                        const description = lecture.querySelector('p').textContent.toLowerCase();
+                        const tags = lecture.querySelectorAll('.lecture-category-tag');
+                        let tagText = '';
+                        
+                        tags.forEach(tag => {
+                            tagText += tag.textContent.toLowerCase() + ' ';
+                        });
+                        
+                        const isVisible = title.includes(searchTerm) || 
+                                        description.includes(searchTerm) || 
+                                        tagText.includes(searchTerm);
+                        
+                        lecture.style.display = isVisible ? 'block' : 'none';
+                    });
+                });
+            }
+
+            // Share functionality
+            window.shareContent = function(lectureId) {
+                if (navigator.share) {
+                    navigator.share({
+                        title: 'Professor Atef Allam - Lecture',
+                        text: 'Check out this educational content by Professor Atef Allam',
+                        url: window.location.href + '#' + lectureId
+                    });
+                } else {
+                    // Fallback - copy URL to clipboard
+                    navigator.clipboard.writeText(window.location.href + '#' + lectureId).then(() => {
+                        // Show temporary notification
+                        const notification = document.createElement('div');
+                        notification.style.cssText = 'position: fixed; top: 20px; right: 20px; background: #000; color: #fff; padding: 12px 20px; border-radius: 6px; z-index: 1000; font-size: 14px;';
+                        notification.textContent = 'Link copied to clipboard';
+                        document.body.appendChild(notification);
+                        setTimeout(() => notification.remove(), 3000);
+                    });
+                }
+            };
+
+        });
+    </script>
+</body>
+</html>
+

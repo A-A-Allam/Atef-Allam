@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biomechanics in Tissue Remodeling - Professor Atef Allam</title>
+    <meta name="description" content="Advanced biomechanics principles in tissue remodeling and vascular disease mechanisms">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #000000;
+            background: #fafafa;
+            line-height: 1.6;
+        }
+        
+        .nav-bar {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid #e5e5e5;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-brand {
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: #000000;
+        }
+        
+        .back-link { color: #000000; text-decoration: none; font-weight: 500; }
+        
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        .lecture-header {
+            text-align: center;
+            padding: 2rem 0 4rem 0;
+            margin-bottom: 4rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .lecture-title {
+            font-size: 2.75rem;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 1rem;
+        }
+        
+        .lecture-subtitle {
+            font-size: 1.25rem;
+            color: #000000;
+            margin-bottom: 2rem;
+        }
+        
+        .lecture-meta { color: #000000; }
+        
+        .fundamentals-section {
+            background: #fafafa;
+            color: #000000;
+            border-radius: 20px;
+            padding: 4rem;
+            margin: 4rem 0;
+        }
+        
+        .fundamentals-section h2 {
+            font-size: 2.25rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .biomechanics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .biomechanics-card {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 2.5rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .definition-highlight {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.125rem;
+        }
+        
+        .mechanisms-section {
+            background: #fafafa;
+            border-radius: 20px;
+            padding: 4rem;
+            margin: 5rem 0;
+            border-left: 2px solid #666666;
+        }
+        
+        .shear-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 4rem 0;
+        }
+        
+        .shear-card {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .shear-header {
+            padding: 2.5rem;
+            color: #000000;
+            text-align: center;
+        }
+        
+        .low-shear .shear-header {
+            background: #fafafa;
+        }
+        
+        .high-shear .shear-header {
+            background: #fafafa;
+        }
+        
+        .shear-content {
+            background: #fafafa;
+            padding: 3rem;
+            border: 1px solid #f0f0f0;
+        }
+        
+        .mechanism-item {
+            background: #fafafa;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-left: 2px solid #666666;
+        }
+        
+        .pathway-flow {
+            background: #fafafa;
+            border-radius: 12px;
+            padding: 1rem;
+            margin: 1rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #000000;
+        }
+        
+        .clinical-evidence {
+            background: #fafafa;
+            border-radius: 20px;
+            padding: 4rem;
+            margin: 5rem 0;
+            border-left: 2px solid #666666;
+        }
+        
+        .evidence-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .evidence-card {
+            background: #fafafa;
+            border: 1px solid #e5e5e5;
+            border-radius: 16px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .evidence-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(34, 197, 94, 0.15);
+        }
+        
+        .evidence-card.imaging { border-left: 2px solid #666666; }
+        .evidence-card.animal { border-left: 2px solid #666666; }
+        .evidence-card.therapeutic { border-left: 2px solid #666666; }
+        
+        .therapeutic-section {
+            background: #fafafa;
+            border-radius: 20px;
+            padding: 4rem;
+            margin: 5rem 0;
+            border-left: 2px solid #666666;
+        }
+        
+        .therapeutic-targets {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .target-card {
+            background: #fafafa;
+            border: 1px solid #e5e5e5;
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+        }
+        
+        .target-icon {
+            width: 60px;
+            height: 60px;
+            background: #fafafa;
+            color: #000000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem auto;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .comparison-section {
+            background: #fafafa;
+            color: #000000;
+            border-radius: 20px;
+            padding: 4rem;
+            margin: 5rem 0;
+        }
+        
+        .comparison-table {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            overflow: hidden;
+            margin: 3rem 0;
+            backdrop-filter: blur(10px);
+        }
+        
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .comparison-table th {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1.5rem;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .comparison-table td {
+            padding: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .comparison-table tr:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .key-insights {
+            background: #fafafa;
+            border-radius: 20px;
+            padding: 4rem;
+            margin: 5rem 0;
+            border-left: 2px solid #666666;
+        }
+        
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .insight-card {
+            background: #fafafa;
+            border: 1px solid #e5e5e5;
+            border-radius: 16px;
+            padding: 2.5rem;
+            border-left: 2px solid #666666;
+        }
+        
+        .insight-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #000000;
+            display: block;
+            margin-bottom: 1rem;
+        }
+        
+        .medical-term { font-weight: 600; color: #000000; }
+        .drug-name { font-weight: 500; color: #000000; font-style: italic; }
+        .percentage { background: #fafafa; color: #000000; padding: 0.25rem 0.5rem; border-radius: 6px; font-weight: 600; font-size: 0.9rem; }
+        .arrow { color: #000000; font-weight: bold; margin: 0 0.5rem; }
+        
+        @media (max-width: 768px) {
+            .lecture-title { font-size: 2.25rem; }
+            .main-content { padding: 2rem 1rem; }
+            .shear-comparison { grid-template-columns: 1fr; }
+            .biomechanics-grid, .evidence-grid, .therapeutic-targets, .insights-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="../Atef Allam New Website/index.html" class="nav-brand">Prof. Atef Allam</a>
+            <a href="../Atef Allam New Website/lectures.html" class="back-link">← Back to Lectures</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <header class="lecture-header">
+            <h1 class="lecture-title">Biomechanics in Tissue Remodeling</h1>
+            <p class="lecture-subtitle">How Physical Forces Shape Healing, Fibrosis & Disease</p>
+            <div class="lecture-meta">
+                <strong>Professor Atef Allam</strong> • Advanced Biomechanics • Research Excellence
+            </div>
+        </header>
+
+        <section class="fundamentals-section">
+            <h2>Fundamentals of Biomechanics</h2>
+            
+            <div class="definition-highlight">
+                <span class="medical-term">Biomechanics</span> = Study of how forces (tension, shear, stiffness) affect living tissues
+            </div>
+            
+            <div class="biomechanics-grid">
+                <div class="biomechanics-card">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">🧬 Key Players</h3>
+                    <p style="margin-bottom: 1rem;"><strong>ECM Stiffness:</strong> Fibrotic tissue is <span class="percentage">10x</span> stiffer than normal</p>
+                    <p style="margin-bottom: 1rem;"><strong>Cellular Sensors:</strong> Integrins, YAP/TAZ, mechanosensitive ion channels</p>
+                    <p><strong>Molecular Response:</strong> Force → Signal → Gene expression changes</p>
+                </div>
+                
+                <div class="biomechanics-card">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">🔄 Disease Links</h3>
+                    <p style="margin-bottom: 1rem;"><strong>Fibrosis:</strong> Stiff matrix activates myofibroblasts → More collagen</p>
+                    <p style="margin-bottom: 1rem;"><strong>Atherosclerosis:</strong> Shear stress alters endothelial behavior</p>
+                    <p><strong>Heart Failure:</strong> Stiff scar tissue forces cardiomyocytes to work harder</p>
+                </div>
+                
+                <div class="biomechanics-card">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">⚕️ Clinical Applications</h3>
+                    <p style="margin-bottom: 1rem;"><strong>FibroScan:</strong> Liver stiffness predicts cirrhosis progression</p>
+                    <p style="margin-bottom: 1rem;"><strong>Therapeutic Targets:</strong> <span class="drug-name">YAP/TAZ</span> inhibitors (verteporfin)</p>
+                    <p><strong>Measurement Tools:</strong> Atomic force microscopy, traction force microscopy</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mechanisms-section">
+            <h2 style="font-size: 2.25rem; margin-bottom: 3rem; text-align: center; color: #000000;">Shear Stress in Atherosclerosis: Dual Mechanisms</h2>
+            
+            <div class="shear-comparison">
+                <div class="shear-card low-shear">
+                    <div class="shear-header">
+                        <h3 style="font-size: 1.75rem; margin-bottom: 1rem;">Low Shear Stress</h3>
+                        <div style="background: rgba(255, 255, 255, 0.2); padding: 0.5rem 1rem; border-radius: 20px; display: inline-block;">
+                            Promotes Atherosclerosis
+                        </div>
+                    </div>
+                    
+                    <div class="shear-content">
+                        <h4 style="margin-bottom: 1.5rem; color: #000000;">📍 High-Risk Locations</h4>
+                        <p style="margin-bottom: 2rem;">Arterial bifurcations (carotid sinus, coronary bifurcations) and inner curvatures (aortic arch)</p>
+                        
+                        <div class="mechanism-item">
+                            <h5 style="margin-bottom: 1rem;">Endothelial Dysfunction</h5>
+                            <div class="pathway-flow">
+                                ↓ eNOS activity → ↓ NO production → Vasoconstriction + Inflammation
+                            </div>
+                            <div class="pathway-flow">
+                                ↑ ROS (NADPH oxidase) → Oxidative stress
+                            </div>
+                        </div>
+                        
+                        <div class="mechanism-item">
+                            <h5 style="margin-bottom: 1rem;">Pro-Inflammatory Signaling</h5>
+                            <p style="margin: 0.5rem 0;">• ↑ <span class="drug-name">NF-κB</span> → VCAM-1, ICAM-1 → Monocyte recruitment</p>
+                            <p style="margin: 0.5rem 0;">• ↑ <span class="drug-name">TLR4/MyD88</span> → Cytokines (IL-6, TNF-α)</p>
+                        </div>
+                        
+                        <div class="mechanism-item">
+                            <h5 style="margin-bottom: 1rem;">Plaque-Prone Phenotype</h5>
+                            <p style="margin: 0.5rem 0;">• ↑ LDL retention (disturbed flow)</p>
+                            <p style="margin: 0.5rem 0;">• ↑ Macrophage infiltration → Foam cells</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shear-card high-shear">
+                    <div class="shear-header">
+                        <h3 style="font-size: 1.75rem; margin-bottom: 1rem;">High Shear Stress</h3>
+                        <div style="background: rgba(255, 255, 255, 0.2); padding: 0.5rem 1rem; border-radius: 20px; display: inline-block;">
+                            Protective Effect
+                        </div>
+                    </div>
+                    
+                    <div class="shear-content">
+                        <h4 style="margin-bottom: 1.5rem; color: #000000;">📍 Protected Locations</h4>
+                        <p style="margin-bottom: 2rem;">Straight arterial segments (mid-left anterior descending artery, common carotid)</p>
+                        
+                        <div class="mechanism-item">
+                            <h5 style="margin-bottom: 1rem;">Endothelial Quiescence</h5>
+                            <div class="pathway-flow">
+                                ↑ eNOS/NO → Anti-inflammatory + Vasodilatory
+                            </div>
+                            <div class="pathway-flow">
+                                ↑ <span class="drug-name">KLF2</span> → Suppresses NF-κB
+                            </div>
+                        </div>
+                        
+                        <div class="mechanism-item">
+                            <h5 style="margin-bottom: 1rem;">Anti-Atherogenic Effects</h5>
+                            <p style="margin: 0.5rem 0;">• ↓ LDL retention (laminar flow clears lipids)</p>
+                            <p style="margin: 0.5rem 0;">• ↑ Autophagy → Clears damaged organelles</p>
+                        </div>
+                        
+                        <div class="mechanism-item">
+                            <h5 style="margin-bottom: 1rem;">Molecular Protection</h5>
+                            <p style="margin: 0.5rem 0;">• Enhanced endothelial barrier function</p>
+                            <p style="margin: 0.5rem 0;">• Reduced inflammatory gene expression</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="clinical-evidence">
+            <h2 style="font-size: 2.25rem; margin-bottom: 3rem; text-align: center; color: #000000;">Clinical Evidence & Validation</h2>
+            
+            <div class="evidence-grid">
+                <div class="evidence-card imaging">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 2rem; color: #000000;">🔬 Advanced Imaging</h3>
+                    <div style="margin: 1.5rem 0;">
+                        <h4 style="margin-bottom: 1rem;">4D Flow MRI</h4>
+                        <p>Demonstrates plaque development specifically in low-shear regions with disturbed flow patterns</p>
+                    </div>
+                    <div style="margin: 1.5rem 0;">
+                        <h4 style="margin-bottom: 1rem;">OCT/IVUS Studies</h4>
+                        <p>Thin-cap fibroatheromas (vulnerable plaques) correlate directly with low shear stress zones</p>
+                    </div>
+                </div>
+                
+                <div class="evidence-card animal">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 2rem; color: #000000;">🐁 Animal Models</h3>
+                    <div style="margin: 1.5rem 0;">
+                        <h4 style="margin-bottom: 1rem;">ApoE⁻/⁻ Mice</h4>
+                        <p>Induced low shear stress consistently produces plaques at bifurcation sites</p>
+                    </div>
+                    <div style="margin: 1.5rem 0;">
+                        <h4 style="margin-bottom: 1rem;">Flow Modification</h4>
+                        <p>Surgical alteration of flow patterns directly influences plaque location and severity</p>
+                    </div>
+                </div>
+                
+                <div class="evidence-card therapeutic">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 2rem; color: #000000;">💊 Therapeutic Validation</h3>
+                    <div style="margin: 1.5rem 0;">
+                        <h4 style="margin-bottom: 1rem;">Exercise Studies</h4>
+                        <p>↑ Shear stress through exercise improves endothelial function and reduces atherosclerosis</p>
+                    </div>
+                    <div style="margin: 1.5rem 0;">
+                        <h4 style="margin-bottom: 1rem;">Stent Design</h4>
+                        <p>Optimized geometry to restore laminar flow reduces restenosis rates</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="therapeutic-section">
+            <h2 style="font-size: 2.25rem; margin-bottom: 3rem; text-align: center; color: #000000;">Therapeutic Targets & Clinical Applications</h2>
+            
+            <div class="therapeutic-targets">
+                <div class="target-card">
+                    <div class="target-icon">💊</div>
+                    <h3 style="margin-bottom: 1rem;">Pharmacological</h3>
+                    <p style="margin-bottom: 1rem;"><span class="drug-name">Statins</span> → ↑ eNOS/NO production</p>
+                    <p><span class="drug-name">SGLT2 inhibitors</span> → ↑ KLF2 expression</p>
+                </div>
+                
+                <div class="target-card">
+                    <div class="target-icon">🔧</div>
+                    <h3 style="margin-bottom: 1rem;">Mechanical</h3>
+                    <p style="margin-bottom: 1rem;">Stent design optimization</p>
+                    <p>Flow-restoring surgical techniques</p>
+                </div>
+                
+                <div class="target-card">
+                    <div class="target-icon">🧬</div>
+                    <h3 style="margin-bottom: 1rem;">Molecular Targets</h3>
+                    <p style="margin-bottom: 1rem;"><span class="drug-name">LOXL2 inhibitors</span> (simtuzumab)</p>
+                    <p><span class="drug-name">YAP/TAZ</span> pathway modulators</p>
+                </div>
+                
+                <div class="target-card">
+                    <div class="target-icon">🏃</div>
+                    <h3 style="margin-bottom: 1rem;">Lifestyle</h3>
+                    <p style="margin-bottom: 1rem;">Exercise → ↑ Shear stress</p>
+                    <p>Improved endothelial function</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="comparison-section">
+            <h2 style="font-size: 2.25rem; margin-bottom: 3rem; text-align: center;">Shear Stress: Comprehensive Comparison</h2>
+            
+            <div class="comparison-table">
+                <table>
+                    <tr>
+                        <th>Shear Stress Type</th>
+                        <th>Endothelial Effect</th>
+                        <th>Atherosclerosis Risk</th>
+                        <th>Key Mechanisms</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Low (Disturbed)</strong></td>
+                        <td>Inflammatory, Dysfunctional</td>
+                        <td style="color: #000000;"><strong>High Risk</strong><br>Plaque formation</td>
+                        <td>↓ eNOS, ↑ NF-κB, ↑ ROS</td>
+                    </tr>
+                    <tr>
+                        <td><strong>High (Laminar)</strong></td>
+                        <td>Protective, Quiescent</td>
+                        <td style="color: #000000;"><strong>Low Risk</strong><br>Plaque resistance</td>
+                        <td>↑ eNOS, ↑ KLF2, ↑ Autophagy</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section class="key-insights">
+            <h2 style="font-size: 2.25rem; margin-bottom: 3rem; text-align: center;">Key Clinical Insights</h2>
+            
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <span class="insight-number">1</span>
+                    <h3 style="margin-bottom: 1rem;">Force-Disease Connection</h3>
+                    <p>Biomechanics acts as cellular communication language - physical forces directly translate to pathological outcomes</p>
+                </div>
+                
+                <div class="insight-card">
+                    <span class="insight-number">2</span>
+                    <h3 style="margin-bottom: 1rem;">Fibrotic Cycle</h3>
+                    <p>Stiff ECM activates fibroblasts via YAP/TAZ, creating self-perpetuating cycle: fibrosis begets more fibrosis</p>
+                </div>
+                
+                <div class="insight-card">
+                    <span class="insight-number">3</span>
+                    <h3 style="margin-bottom: 1rem;">Flow Patterns Matter</h3>
+                    <p>Low shear stress at bifurcations drives atherosclerosis; high laminar shear in straight segments is protective</p>
+                </div>
+                
+                <div class="insight-card">
+                    <span class="insight-number">4</span>
+                    <h3 style="margin-bottom: 1rem;">Therapeutic Potential</h3>
+                    <p>Understanding mechanobiology opens new treatment avenues - from YAP/TAZ inhibitors to flow-optimized device design</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

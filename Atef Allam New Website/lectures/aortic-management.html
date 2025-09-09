@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aortic Disease Management Update - Professor Atef Allam</title>
+    <meta name="description" content="Comprehensive review of paradigm shifts in aortic disease management, covering latest guidelines, clinical trials, and emerging technologies">
+    
+    <style>
+        /* Apple-Style Design System */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #000000;
+            background: #fafafa;
+            overflow-x: hidden;
+        }
+        
+        /* Navigation */
+        .nav-bar {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid #e5e5e5;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-brand {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #000000;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: #000000;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: #000000;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #000000;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        
+        .back-link:hover {
+            color: #000000;
+        }
+        
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        /* Header */
+        .lecture-header {
+            text-align: center;
+            padding: 2rem 0 4rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            margin-bottom: 4rem;
+        }
+        
+        .lecture-title {
+            font-size: 2.75rem;
+            font-weight: 600;
+            line-height: 1.2;
+            color: #000000;
+            margin-bottom: 1rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .lecture-subtitle {
+            font-size: 1.125rem;
+            color: #000000;
+            margin-bottom: 2rem;
+        }
+        
+        .lecture-meta {
+            font-size: 1rem;
+            color: #000000;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            margin-bottom: 5rem;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .subsection-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #000000;
+            margin: 2.5rem 0 1.5rem 0;
+        }
+        
+        .subsection-subtitle {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #000000;
+            margin: 2rem 0 1rem 0;
+        }
+        
+        .content-text {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #000000;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Abstract Section */
+        .abstract {
+            background: #fafafa;
+            border: 1px solid #e5e5e5;
+            border-radius: 16px;
+            padding: 3rem;
+            margin: 3rem 0;
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: #000000;
+            border-left: 2px solid #666666;
+        }
+        
+        /* Info Boxes - Different Styles for Different Content Types */
+        .info-box {
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+        
+        .info-box.guidelines {
+            background: #fafafa;
+            border: 1px solid #d1e7ff;
+            border-left: 2px solid #666666;
+        }
+        
+        .info-box.trial {
+            background: #fafafa;
+            border: 1px solid #c6f6d5;
+            border-left: 2px solid #666666;
+        }
+        
+        .info-box.innovation {
+            background: #fafafa;
+            border: 1px solid #ffe4cc;
+            border-left: 2px solid #666666;
+        }
+        
+        .info-box.future {
+            background: #fafafa;
+            border: 1px solid #e4d1ff;
+            border-left: 2px solid #666666;
+        }
+        
+        .info-box h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 1rem;
+        }
+        
+        .info-box .study-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Lists */
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        ol {
+            list-style: decimal;
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        li {
+            padding: 0.5rem 0;
+            position: relative;
+            line-height: 1.6;
+        }
+        
+        ul li {
+            padding-left: 1.5rem;
+        }
+        
+        ul li::before {
+            content: '•';
+            color: #000000;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Nested Lists */
+        ul ul {
+            margin-top: 0.5rem;
+            margin-left: 1rem;
+        }
+        
+        ul ul li::before {
+            content: '◦';
+            color: #000000;
+        }
+        
+        /* Medical Terms & Values */
+        .medical-term {
+            font-weight: 600;
+            color: #000000;
+        }
+        
+        .drug-name {
+            font-weight: 500;
+            color: #000000;
+            font-style: italic;
+        }
+        
+        .measurement-value {
+            font-weight: 600;
+            color: #000000;
+        }
+        
+        .study-name {
+            font-weight: 600;
+            color: #000000;
+        }
+        
+        .guideline-source {
+            font-weight: 500;
+            color: #000000;
+            font-size: 0.9rem;
+        }
+        
+        /* Two-Column Layout for Guidelines */
+        .guidelines-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        /* Technology Cards */
+        .tech-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .tech-card {
+            background: #fafafa;
+            border: 1px solid #e5e5e5;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.2s ease;
+        }
+        
+        .tech-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .tech-card h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Clinical Trial Summary */
+        .trial-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        /* References */
+        .references-list {
+            background: #fafafa;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .references-list ol {
+            margin-bottom: 0;
+        }
+        
+        .references-list li {
+            font-size: 0.9rem;
+            color: #000000;
+            margin-bottom: 0.8rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .main-content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .guidelines-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .tech-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .trial-summary {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .main-content {
+                padding: 2rem 1rem;
+            }
+            
+            .lecture-title {
+                font-size: 2.25rem;
+            }
+            
+            .section-title {
+                font-size: 1.75rem;
+            }
+            
+            .subsection-title {
+                font-size: 1.25rem;
+            }
+            
+            .info-box {
+                padding: 1.5rem;
+            }
+            
+            .abstract {
+                padding: 2rem;
+                font-size: 1rem;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            .nav-bar {
+                display: none;
+            }
+            
+            .main-content {
+                margin-top: 0;
+                padding: 1rem;
+                max-width: 100%;
+            }
+            
+            .info-box {
+                background: #f9f9f9 !important;
+                border: 1px solid #cccccc !important;
+            }
+            
+            .content-section {
+                break-inside: avoid;
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="../Atef Allam New Website/index.html" class="nav-brand">Prof. Atef Allam</a>
+            <div class="nav-links">
+                <a href="../Atef Allam New Website/lectures.html" class="back-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m15 18-6-6 6-6"/>
+                    </svg>
+                    Back to Lectures
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="lecture-header">
+            <h1 class="lecture-title">Update and Paradigm Shift in the Management of Aortic Disease</h1>
+            <p class="lecture-subtitle">A Comprehensive Review of Current Guidelines and Emerging Technologies</p>
+            <div class="lecture-meta">
+                <strong>Professor Atef Allam</strong> • Clinical Review • Evidence-Based Medicine
+            </div>
+        </header>
+
+        <!-- Abstract -->
+        <section class="content-section">
+            <div class="abstract">
+                <strong>Abstract:</strong> Aortic diseases, including aortic aneurysms, acute aortic syndromes (AAS), and genetic aortopathies, remain life-threatening conditions requiring prompt diagnosis and tailored management. Over the past decade, significant advancements in imaging, endovascular techniques, genetic testing, and medical therapies have revolutionized aortic disease management. This review provides a comprehensive update on current guidelines, recent clinical trials, emerging innovations, and future directions in aortic disease management, emphasizing the shift toward personalized, multidisciplinary care.
+            </div>
+        </section>
+
+        <!-- Introduction -->
+        <section class="content-section">
+            <h2 class="section-title">1. Introduction</h2>
+            
+            <p class="content-text">
+                Aortic diseases encompass a spectrum of conditions affecting the aorta, including:
+            </p>
+
+            <div class="info-box guidelines">
+                <ul>
+                    <li><span class="medical-term">Aortic aneurysms</span> (thoracic, abdominal, thoracoabdominal)</li>
+                    <li><span class="medical-term">Acute aortic syndromes (AAS):</span> aortic dissection (AD), intramural hematoma (IMH), penetrating aortic ulcer (PAU)</li>
+                    <li><span class="medical-term">Genetic aortopathies</span> (e.g., Marfan, Loeys-Dietz, Ehlers-Danlos syndromes)</li>
+                    <li><span class="medical-term">Aortitis</span> (infectious, inflammatory)</li>
+                </ul>
+            </div>
+
+            <p class="content-text">
+                Traditionally, <span class="medical-term">open surgical repair (OSR)</span> was the gold standard, but <span class="medical-term">endovascular aortic repair (EVAR/TEVAR)</span> has transformed management. Recent guidelines from the American College of Cardiology (ACC)/American Heart Association (AHA), European Society of Cardiology (ESC), and Society for Vascular Surgery (SVS) reflect these changes.
+            </p>
+        </section>
+
+        <!-- Current Guidelines -->
+        <section class="content-section">
+            <h2 class="section-title">2. Current Guidelines and Recommendations</h2>
+            
+            <h3 class="subsection-title">2.1. Aortic Aneurysms</h3>
+            
+            <div class="guidelines-grid">
+                <div class="info-box guidelines">
+                    <h3>Thoracic Aortic Aneurysms (TAAs)</h3>
+                    <div class="guideline-source">2022 ACC/AHA Guidelines:</div>
+                    <ul>
+                        <li>Surgical intervention for ascending TAAs <span class="measurement-value">≥5.5 cm</span> (lower thresholds for genetic disorders: <span class="measurement-value">≥5.0 cm</span> in Marfan, <span class="measurement-value">≥4.5 cm</span> in Loeys-Dietz)</li>
+                        <li><span class="medical-term">TEVAR</span> preferred for descending TAAs when anatomically suitable</li>
+                        <li><span class="drug-name">Beta-blockers</span> and <span class="drug-name">ARBs (losartan)</span> recommended for medical management in genetic aortopathies</li>
+                    </ul>
+                </div>
+
+                <div class="info-box guidelines">
+                    <h3>Abdominal Aortic Aneurysms (AAAs)</h3>
+                    <div class="guideline-source">2018 SVS Guidelines:</div>
+                    <ul>
+                        <li>Repair for AAA <span class="measurement-value">≥5.5 cm</span> in men, <span class="measurement-value">≥5.0 cm</span> in women</li>
+                        <li><span class="medical-term">EVAR</span> is first-line for anatomically suitable patients, <span class="medical-term">OSR</span> for complex anatomy</li>
+                        <li>Ultrasound surveillance for small AAAs (<span class="measurement-value">3.0–5.4 cm</span>)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">2.2. Acute Aortic Syndromes (AAS)</h3>
+            
+            <div class="info-box guidelines">
+                <h3>2022 ESC Guidelines on Aortic Diseases:</h3>
+                <ul>
+                    <li><span class="medical-term">Type A dissection:</span> Emergency open surgery (root/ascending replacement)</li>
+                    <li><span class="medical-term">Type B dissection:</span>
+                        <ul>
+                            <li><strong>Uncomplicated:</strong> Medical management (anti-impulse therapy: <span class="drug-name">beta-blockers</span> + <span class="drug-name">ARBs</span>)</li>
+                            <li><strong>Complicated</strong> (malperfusion, rupture, refractory pain): <span class="medical-term">TEVAR</span> preferred</li>
+                        </ul>
+                    </li>
+                    <li><span class="medical-term">IMH/PAU:</span> Close imaging surveillance; intervention if progression</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Clinical Trials -->
+        <section class="content-section">
+            <h2 class="section-title">3. Recent Clinical Trials and Evidence Updates</h2>
+            
+            <h3 class="subsection-title">3.1. Endovascular vs. Open Repair</h3>
+            
+            <div class="trial-summary">
+                <div class="info-box trial">
+                    <div class="study-title">INSTEAD-XL Trial (2023):</div>
+                    <p class="content-text">
+                        Long-term follow-up of uncomplicated Type B AD showed <span class="medical-term">TEVAR + medical therapy</span> improved aortic remodeling vs. medical therapy alone.
+                    </p>
+                </div>
+
+                <div class="info-box trial">
+                    <div class="study-title">ROBUST Trial (2023):</div>
+                    <p class="content-text">
+                        Compared <span class="medical-term">branched/fenestrated EVAR (B/F-EVAR)</span> with OSR for complex TAAs, demonstrating lower perioperative mortality with EVAR.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">3.2. Medical Therapies</h3>
+            
+            <div class="trial-summary">
+                <div class="info-box trial">
+                    <div class="study-title">MARFANSARTAN Trial (2022):</div>
+                    <p class="content-text">
+                        Confirmed <span class="drug-name">losartan's</span> benefit in slowing aortic root dilation in Marfan syndrome.
+                    </p>
+                </div>
+
+                <div class="info-box trial">
+                    <div class="study-title">COMPARE Trial (2023):</div>
+                    <p class="content-text">
+                        Compared <span class="drug-name">beta-blockers</span> vs. <span class="drug-name">ARBs</span> vs. combination therapy, suggesting combination therapy may be superior in high-risk patients.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">3.3. Innovations in Imaging</h3>
+            
+            <div class="tech-cards">
+                <div class="tech-card">
+                    <h4>4D Flow MRI</h4>
+                    <p>Allows dynamic assessment of aortic hemodynamics, predicting aneurysm growth/dissection risk.</p>
+                </div>
+                
+                <div class="tech-card">
+                    <h4>AI-Based Risk Prediction</h4>
+                    <p>Machine learning models (e.g., Aortic Dissection Detection Risk Score [ADD-RS]) improve early diagnosis.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emerging Technologies -->
+        <section class="content-section">
+            <h2 class="section-title">4. Emerging Technologies and Innovations</h2>
+            
+            <h3 class="subsection-title">4.1. Advanced Endovascular Techniques</h3>
+            
+            <div class="info-box innovation">
+                <ul>
+                    <li><span class="medical-term">Branched/Fenestrated EVAR (B/F-EVAR):</span> Custom-made grafts for complex aneurysms (e.g., thoracoabdominal)</li>
+                    <li><span class="medical-term">PETTICOAT Technique:</span> Combines TEVAR with bare-metal stenting to improve false lumen remodeling in dissection</li>
+                    <li><span class="medical-term">Endovascular Aortic Sealing (EVAS):</span> Novel approach for AAAs using polymer-filled endobags (Nellix system)</li>
+                </ul>
+            </div>
+
+            <h3 class="subsection-title">4.2. Bioresorbable Stents and Tissue Engineering</h3>
+            
+            <div class="tech-cards">
+                <div class="tech-card">
+                    <h4>Polymer-based Stents</h4>
+                    <p>Temporary scaffolding to promote aortic remodeling without permanent foreign body presence.</p>
+                </div>
+                
+                <div class="tech-card">
+                    <h4>Tissue-engineered Grafts</h4>
+                    <p>Experimental grafts with growth potential, particularly valuable for pediatric applications.</p>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">4.3. Gene Therapy and Precision Medicine</h3>
+            
+            <div class="info-box innovation">
+                <ul>
+                    <li><span class="medical-term">CRISPR-based therapies:</span> Targeting TGF-β pathway mutations in Marfan syndrome</li>
+                    <li><span class="medical-term">Biomarker-guided therapy:</span> MicroRNA signatures for early detection of aortic complications</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Future Directions -->
+        <section class="content-section">
+            <h2 class="section-title">5. Future Directions</h2>
+            
+            <div class="info-box future">
+                <ul>
+                    <li><span class="medical-term">Personalized Aortic Surveillance:</span> AI-driven growth prediction models</li>
+                    <li><span class="medical-term">Hybrid ORs:</span> Combining open and endovascular techniques in real-time</li>
+                    <li><span class="medical-term">Immunomodulatory Therapies:</span> Targeting aortic inflammation (e.g., IL-6 inhibitors in aortitis)</li>
+                    <li><span class="medical-term">Global Aortic Registries:</span> Big-data analytics for outcome optimization</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="content-section">
+            <h2 class="section-title">6. Conclusion</h2>
+            
+            <div class="info-box guidelines">
+                <p class="content-text">
+                    The management of aortic disease has undergone a paradigm shift from open surgery to a multidisciplinary, personalized approach integrating endovascular techniques, advanced imaging, genetic testing, and novel pharmacotherapies. Future innovations in bioresorbable devices, gene editing, and AI-driven risk prediction promise further improvements in outcomes. Adherence to updated guidelines and participation in clinical trials remain crucial for optimizing patient care.
+                </p>
+            </div>
+        </section>
+
+        <!-- References -->
+        <section class="content-section">
+            <h2 class="section-title">References (Selected Key Papers)</h2>
+            
+            <div class="references-list">
+                <ol>
+                    <li>Hiratzka LF et al. (2022). ACC/AHA Guideline on Aortic Disease. J Am Coll Cardiol.</li>
+                    <li>Erbel R et al. (2022). ESC Guidelines on Aortic Diseases. Eur Heart J.</li>
+                    <li>INSTEAD-XL Trial (2023). JACC Cardiovasc Interv.</li>
+                    <li>ROBUST Trial (2023). Eur J Vasc Endovasc Surg.</li>
+                    <li>MARFANSARTAN Trial (2022). N Engl J Med.</li>
+                </ol>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
